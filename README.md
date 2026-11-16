@@ -10,7 +10,7 @@ You can make all of these right on github.com: open the file, click the pencil i
 
 | To change | Edit this file | What to look for |
 | --- | --- | --- |
-| Today's special (the letterboard on the home page) | `src/data/site.json` | `"special"`. Set `"show": false` to hide it. |
+| Today's special (the letterboard on the home page) | **Use the update page:** `/update/` on your phone | Type the special, enter the PIN, tap Post. Live in about a minute. `"special"` in `src/data/site.json` is only the fallback if nothing has been posted. |
 | Hours | `src/data/site.json` | `"hours"`. Times are 24-hour (`"20:00"` is 8 p.m.). The "Open now" label, the footer and Google all update from this. |
 | Announcement ("DINNER IS BACK!") | `src/data/site.json` | `"announcement"` |
 | Phone, address, order link, job form link | `src/data/site.json` | Near the top |
@@ -57,6 +57,12 @@ Items with more than one size use `options` instead of `price`:
 ```
 
 `"marks": ["*"]` adds the raw or undercooked asterisk. `"marks": ["**"]` adds the cold smoked asterisk.
+
+## Posting the daily special
+
+Bookmark `/update/` on your phone (or add it to your home screen). Pick which special it is, type the name, description and price, enter the PIN and tap **Post to website**. The letterboard on the home page changes within about a minute. **Take the special down** hides the letterboard until you post again.
+
+The PIN is stored in Vercel under Project › Settings › Environment Variables › `UPDATE_PIN`. To change it, edit that value and redeploy. The special itself is saved in the project's Vercel Blob storage (`chutzpah-specials`), not in the code.
 
 ## Forms
 

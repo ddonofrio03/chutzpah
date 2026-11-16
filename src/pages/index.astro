@@ -78,18 +78,16 @@ const sample = sampleNames.map((f) => {
   <!-- Today: special, hours, news -->
   <section class="section today">
     <div class="wrap today-grid">
-      {
-        site.special.show && (
-          <div class="special">
-            <Letterboard
-              label={site.special.label}
-              title={site.special.title}
-              description={site.special.description}
-              price={site.special.price}
-            />
-          </div>
-        )
-      }
+      <!-- Daily special: Eric posts it from /update/; site.json is the fallback -->
+      <div class="special" data-special-wrap hidden={!site.special.show}>
+        <Letterboard
+          live
+          label={site.special.label}
+          title={site.special.title}
+          description={site.special.description}
+          price={site.special.price}
+        />
+      </div>
 
       <div class="hours-card">
         <span class="kicker">Hours</span>

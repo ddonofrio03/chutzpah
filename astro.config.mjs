@@ -1,15 +1,12 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import vercel from '@astrojs/vercel';
 
-// Old WordPress URLs that no longer have their own page point to where that content lives now.
+// Every page is pre-built as static HTML. The only server code is /api/special,
+// which lets Eric post the daily special from his phone.
 export default defineConfig({
   site: 'https://chutzpahdeli.com',
   trailingSlash: 'always',
-  redirects: {
-    '/menu/': '/catering/',
-    '/breakfast/': '/our-menu/#breakfast',
-    '/more-stuff/': '/our-menu/#burgers',
-    '/beverage-dessert/': '/our-menu/#desserts',
-    '/chutzpah-home/': '/',
-  },
+  output: 'static',
+  adapter: vercel(),
 });

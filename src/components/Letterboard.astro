@@ -1,25 +1,48 @@
 ---
 /*
-  The felt letterboard that hangs behind every deli counter.
-  Used for the daily special. Eric changes the words in src/data/site.json.
+  The felt letterboard that hangs behind every deli counter, used for the daily special.
+  It renders with the special saved in src/data/site.json, then swaps in whatever Eric
+  last posted from /update/ (see src/pages/api/special.ts).
 */
 interface Props {
   label: string;
   title: string;
   description?: string;
   price?: string;
+  live?: boolean;
 }
-const { label, title, description, price } = Astro.props;
+const { label, title, description = '', price = '', live = false } = Astro.props;
 ---
 
-<figure class="board" aria-label={`${label}: ${title}`}>
+<figure class="board" data-live-special={live ? '' : undefined}>
   <div class="felt">
-    <p class="row label">{label}</p>
-    <p class="row title">{title}</p>
-    {description && <p class="row desc">{description}</p>}
-    {price && <p class="row price">{price}</p>}
+    <p class="row label" data-f="label">{label}</p>
+    <p class="row title" data-f="title">{title}</p>
+    <p class="row desc" data-f="description" hidden={!description}>{description}</p>
+    <p class="row price" data-f="price" hidden={!price}>{price}</p>
   </div>
 </figure>
+
+<script>
+  type Special = { show: boolean; label: string; title: string; description: string; price: string };
+  const board = document.querySelector<HTMLElement>('[data-live-special]');
+  if (board) {
+    fetch('/api/special/')
+      .then((r) => (r.ok ? (r.json() as Promise<Special>) : null))
+      .then((s) => {
+        if (!s) return; // nothing posted yet: keep the built-in special
+        const wrap = board.closest<HTMLElement>('[data-special-wrap]') ?? board;
+        wrap.hidden = !s.show;
+        (['label', 'title', 'description', 'price'] as const).forEach((k) => {
+          const el = board.querySelector<HTMLElement>(`[data-f="${k}"]`);
+          if (!el) return;
+          el.textContent = s[k] ?? '';
+          el.hidden = !s[k];
+        });
+      })
+      .catch(() => {});
+  }
+</script>
 
 <style>
   .board {
@@ -55,6 +78,9 @@ const { label, title, description, price } = Astro.props;
     letter-spacing: 0.14em;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.9);
     max-width: 26ch;
+  }
+  .row[hidden] {
+    display: none;
   }
   .label {
     font-size: 14px;

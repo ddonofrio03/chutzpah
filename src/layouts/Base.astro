@@ -9,9 +9,11 @@ import { fullAddress } from '../lib/hours';
 interface Props {
   title: string;
   description?: string;
+  noindex?: boolean;
 }
 const {
   title,
+  noindex = false,
   description = 'Breakfast, lunch, dinner and catering from a REAL New York deli at Fairfax Towne Center since 2001. Order online for pickup or stop in, 7 days a week.',
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -50,6 +52,7 @@ const jsonLd = {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.png" type="image/png" />
     <meta name="theme-color" content="#1b1916" />

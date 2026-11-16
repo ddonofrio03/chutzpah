@@ -1,0 +1,22 @@
+---
+// Sends an old WordPress address to where that content lives now.
+interface Props {
+  to: string;
+}
+const { to } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Moved | Chutzpah Deli</title>
+    <meta http-equiv="refresh" content={`0;url=${to}`} />
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href={new URL(to, Astro.site)} />
+    <script is:inline define:vars={{ to }}>location.replace(to);</script>
+  </head>
+  <body>
+    <a href={to}>This page has moved. Continue.</a>
+  </body>
+</html>
