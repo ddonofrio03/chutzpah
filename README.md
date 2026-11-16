@@ -22,24 +22,18 @@ You can make all of these right on github.com: open the file, click the pencil i
 | Gallery captions | `src/data/gallery.json` | Photos are in `src/assets/gallery/` |
 | Catering-by-occasion pages | `src/content/catering/*.md` | Plain text. The file name is the web address. |
 
-## Holiday menus (Rosh Hashanah, Break Fast, Passover)
+## Holiday menus (Rosh Hashanah, Break Fast, Passover and more)
 
-One switch in `src/data/holiday.json` controls everything:
+Use the **Holiday Menu** section of `/update/` (same page and PIN as the daily special):
 
-```json
-"active": "rosh-hashanah-2026",
-"showUntil": "2026-09-11",
-```
+1. Pick the holiday from the list, or choose **Other** and type it in.
+2. Optional: a headline and an "order by / pickup" line.
+3. Upload the menu as a PDF, JPG or PNG.
+4. Flip the switch **ON** and tap **Save holiday menu**.
 
-- **To turn it on:** set `"active"` to the menu's `id`. This adds a "Rosh Hashanah Menu" link to the top menu bar, a banner on the home page, a tab on the menu page, and the full menu at `/holidaymenu/`.
-- **To take it down:** set `"active"` back to `null`. Or set a `"showUntil"` date when you turn it on, and everything hides itself the day after, even if nobody remembers.
-- When nothing is on, `/holidaymenu/` shows a short "between holidays" note pointing to catering, so old links never land on a stale menu.
+While it's on, the holiday menu appears in the top menu bar, as a banner on the home page, as a tab on the menu page, and at `/holidaymenu/`. Flip it **OFF** and save to take it down everywhere, or set **Take it down automatically after** a date and it hides itself.
 
-**A new holiday each year:** copy last year's block in `"menus"`, change the `id` (for example `rosh-hashanah-2027`), and update the title, order dates and prices. Each menu has a `name` (used in the link and banner), a one-line `homeBlurb` for the home page, and `dates` for the order deadline and pickup.
-
-**No time to type it in?** Put the menu image in `public/files/`, set `"image": "/files/rosh-hashanah-2027.jpg"` (or `"pdf"` for a PDF), and leave `sections` empty. The page shows the image instead.
-
-`"orderForm"` links the banner's order button to an online form (the Passover menu uses `/passover-order/`). Leave it `null` and the button calls the store.
+The 2026 holiday menus, typed out from the printed versions, are kept for reference in `src/data/archive/`. The site doesn't read that folder.
 
 ### Menu item format
 

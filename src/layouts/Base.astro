@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import HolidayExpiry from '../components/HolidayExpiry.astro';
+import HolidayLive from '../components/HolidayLive.astro';
 import site from '../data/site.json';
 import { fullAddress } from '../lib/hours';
 
@@ -10,10 +10,12 @@ interface Props {
   title: string;
   description?: string;
   noindex?: boolean;
+  bodyPage?: string;
 }
 const {
   title,
   noindex = false,
+  bodyPage,
   description = 'Breakfast, lunch, dinner and catering from a REAL New York deli at Fairfax Towne Center since 2001. Order online for pickup or stop in, 7 days a week.',
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -64,14 +66,14 @@ const jsonLd = {
     <meta name="geo.placename" content={fullAddress} />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
-  <body>
+  <body data-page={bodyPage}>
     <a class="skip" href="#main">Skip to content</a>
     <Header />
     <main id="main">
       <slot />
     </main>
     <Footer />
-    <HolidayExpiry />
+    <HolidayLive />
     <style>
       .skip {
         position: absolute;

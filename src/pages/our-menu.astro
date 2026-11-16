@@ -4,7 +4,6 @@ import MenuSection from '../components/MenuSection.astro';
 import site from '../data/site.json';
 import menu from '../data/menu.json';
 import HolidayBanner from '../components/HolidayBanner.astro';
-import { activeHoliday, holidayUntil } from '../lib/holiday';
 ---
 
 <Base
@@ -27,13 +26,7 @@ import { activeHoliday, holidayUntil } from '../lib/holiday';
 
   <nav class="cats" aria-label="Menu sections">
     <div class="wrap cats-inner">
-      {
-        activeHoliday && (
-          <a href="/holidaymenu/" class="holiday-tab" data-holiday-until={holidayUntil || undefined}>
-            {activeHoliday.name} Menu
-          </a>
-        )
-      }
+      <a href="/holidaymenu/" class="holiday-tab" data-holiday hidden><span data-h="name"></span> Menu</a>
       {menu.categories.map((c) => <a href={`#${c.id}`}>{c.title}</a>)}
     </div>
   </nav>
@@ -125,6 +118,9 @@ import { activeHoliday, holidayUntil } from '../lib/holiday';
   }
   .cats a:hover {
     border-color: var(--rye);
+  }
+  .cats a[hidden] {
+    display: none;
   }
   .cats a.holiday-tab {
     background: var(--mustard);

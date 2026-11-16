@@ -1,12 +1,9 @@
 {
   "_howto": [
-    "To SHOW a holiday menu: set \"active\" to that menu id (for example \"rosh-hashanah-2026\").",
-    "To HIDE it: set \"active\" to null. Setting \"showUntil\" (YYYY-MM-DD) also hides it automatically after that day.",
-    "New holiday: copy last year's menu block below, give it a new id, then change the title, dates and prices.",
-    "No time to type the menu? Put the menu image in public/files/ and set \"image\" to \"/files/your-file.jpg\" (or \"pdf\" for a PDF). The sections list can stay empty."
+    "Archive only. The website does not read this file.",
+    "These are the 2026 holiday menus typed out from the printed versions, kept as a reference for next year.",
+    "To put a holiday menu on the site, use the Holiday Menu section of /update/ and upload the PDF or picture."
   ],
-  "active": null,
-  "showUntil": null,
   "menus": [
     {
       "id": "break-fast-2026",

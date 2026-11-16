@@ -1,0 +1,64 @@
+---
+/*
+  Turns the holiday menu on or off across the site, from what Eric saved on /update/.
+  Every holiday spot on the site is in the HTML but hidden; this script fills it in and
+  shows it when a holiday menu is switched on (and its end date hasn't passed).
+
+  Markers it looks for:
+    [data-holiday]          shown only while a holiday menu is on
+    [data-holiday-off]      shown only while none is on
+    [data-h="name|title|note"]  filled with that text
+    [data-h-file]           link set to the uploaded menu file
+    [data-h-viewer]         the holiday menu page's picture or PDF viewer
+*/
+---
+
+<script>
+  type LiveHoliday = {
+    show: boolean;
+    name: string;
+    title: string;
+    note: string;
+    fileUrl: string;
+    fileType: 'pdf' | 'image' | '';
+    showUntil: string;
+  };
+
+  const todayNY = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York' }).format(new Date());
+
+  function apply(h: LiveHoliday | null) {
+    const on = !!h && h.show && !!h.fileUrl && (!h.showUntil || todayNY <= h.showUntil);
+    document.querySelectorAll<HTMLElement>('[data-holiday]').forEach((el) => (el.hidden = !on));
+    document.querySelectorAll<HTMLElement>('[data-holiday-off]').forEach((el) => (el.hidden = on));
+    if (!on || !h) return;
+
+    document.querySelectorAll<HTMLElement>('[data-h]').forEach((el) => {
+      const v = h[el.dataset.h as 'name' | 'title' | 'note'] ?? '';
+      el.textContent = v;
+      if (el.dataset.h === 'note') el.hidden = !v;
+    });
+    document.querySelectorAll<HTMLAnchorElement>('[data-h-file]').forEach((a) => (a.href = h.fileUrl));
+
+    const viewer = document.querySelector<HTMLElement>('[data-h-viewer]');
+    if (viewer) {
+      if (h.fileType === 'image') {
+        const img = document.createElement('img');
+        img.src = h.fileUrl;
+        img.alt = h.title;
+        viewer.replaceChildren(img);
+      } else {
+        const frame = document.createElement('iframe');
+        frame.src = `${h.fileUrl}#view=FitH`;
+        frame.title = h.title;
+        viewer.replaceChildren(frame);
+        viewer.classList.add('is-pdf');
+      }
+    }
+    if (document.body.dataset.page === 'holiday') document.title = `${h.title} | Chutzpah Deli`;
+  }
+
+  fetch('/api/holiday/')
+    .then((r) => (r.ok ? (r.json() as Promise<LiveHoliday>) : null))
+    .then(apply)
+    .catch(() => apply(null));
+</script>

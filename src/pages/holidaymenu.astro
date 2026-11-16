@@ -1,65 +1,31 @@
 ---
 /*
-  Shows whichever holiday menu is switched on in src/data/holiday.json.
-  When none is on (or its showUntil date has passed), visitors see a short
-  "between holidays" note instead of an out-of-date menu.
+  The holiday menu page. Eric uploads the menu (PDF or picture) on /update/ and flips it on;
+  this page shows it. When nothing is on, visitors see a short "between holidays" note.
 */
 import Base from '../layouts/Base.astro';
-import MenuSection from '../components/MenuSection.astro';
 import site from '../data/site.json';
-import { activeHoliday as h, holidayUntil } from '../lib/holiday';
 ---
 
-<Base
-  title={h ? `${h.name} Menu | Chutzpah Deli, Fairfax VA` : 'Holiday Menu | Chutzpah Deli, Fairfax VA'}
-  description="Chutzpah Deli holiday catering menus for Rosh Hashanah, Yom Kippur break fast and Passover."
->
-  {
-    h && (
-      <div data-holiday-until={holidayUntil || undefined}>
-        <section class="page-head">
-          <div class="wrap">
-            <span class="kicker">Holiday Menu</span>
-            <h1>{h.title}</h1>
-            {h.dates && <p class="dates">{h.dates}</p>}
-            <div class="btn-row btns">
-              {h.orderForm && (
-                <a class="btn btn-red" href={h.orderForm}>
-                  Order Online
-                </a>
-              )}
-              <a class={h.orderForm ? 'btn btn-light' : 'btn btn-red'} href={site.phoneHref}>
-                Order: {site.phone}
-              </a>
-              {h.pdf && (
-                <a class="btn btn-light" href={h.pdf}>
-                  Download the menu (PDF)
-                </a>
-              )}
-            </div>
-          </div>
-        </section>
-
-        <div class="wrap body">
-          {h.sections.length > 0 && (
-            <div class="cols">
-              {h.sections.map((s) => (
-                <MenuSection section={s} />
-              ))}
-            </div>
-          )}
-          {h.image && <img class="menu-img" src={h.image} alt={`${h.title}`} />}
-          {h.other_text
-            .filter((t) => !t.includes('385'))
-            .map((t) => (
-              <p class="note">{t}</p>
-            ))}
+<Base title="Holiday Menu | Chutzpah Deli, Fairfax VA" description="Chutzpah Deli holiday catering menus for Rosh Hashanah, Yom Kippur break fast, Passover and more." bodyPage="holiday">
+  <div data-holiday hidden>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="kicker">Holiday Menu</span>
+        <h1 data-h="title"></h1>
+        <p class="note" data-h="note" hidden></p>
+        <div class="btn-row btns">
+          <a class="btn btn-red" href={site.phoneHref}>Order: {site.phone}</a>
+          <a class="btn btn-light" data-h-file href="#" target="_blank" rel="noopener">Open the menu full size</a>
         </div>
       </div>
-    )
-  }
+    </section>
+    <div class="wrap body">
+      <div class="viewer" data-h-viewer></div>
+    </div>
+  </div>
 
-  <section class="page-head" data-holiday-fallback={h ? holidayUntil || undefined : undefined} hidden={h ? true : undefined}>
+  <section class="page-head" data-holiday-off>
     <div class="wrap">
       <span class="kicker">Holiday Menu</span>
       <h1>Between holidays</h1>
@@ -76,30 +42,32 @@ import { activeHoliday as h, holidayUntil } from '../lib/holiday';
 </Base>
 
 <style>
-  .dates {
+  [hidden] {
+    display: none !important;
+  }
+  .note {
     white-space: pre-line;
   }
   .btns {
     margin-top: 24px;
   }
   .body {
-    padding-block: clamp(48px, 6vw, 80px);
+    padding-block: clamp(32px, 5vw, 64px);
   }
-  .cols {
-    columns: 2 420px;
-    column-gap: clamp(32px, 5vw, 64px);
-  }
-  .cols > :global(*) {
-    margin-bottom: 40px;
-  }
-  .menu-img {
-    width: 100%;
-    max-width: 900px;
+  .viewer {
+    max-width: 960px;
     margin-inline: auto;
+  }
+  .viewer :global(img) {
+    width: 100%;
+    background: #fff;
     box-shadow: var(--shadow);
   }
-  .note {
-    font-weight: 700;
-    color: var(--pastrami);
+  .viewer.is-pdf :global(iframe) {
+    display: block;
+    width: 100%;
+    height: min(1200px, 85vh);
+    border: 1px solid var(--grout);
+    background: #fff;
   }
 </style>
