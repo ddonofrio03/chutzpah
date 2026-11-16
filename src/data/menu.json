@@ -1810,9 +1810,7 @@
               "price": "$20.00"
             }
           ],
-          "footnotes": [
-            "* (red asterisk at top-left corner of section box, refers to raw/undercooked disclaimer)"
-          ]
+          "advisory": true
         },
         {
           "title": "ANGUS STEAK BURGERS",
@@ -2216,9 +2214,6 @@
                 }
               ]
             }
-          ],
-          "footnotes": [
-            "Price columns headed: A La Carte | Entrees"
           ]
         },
         {
