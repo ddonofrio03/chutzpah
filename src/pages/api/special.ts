@@ -65,7 +65,7 @@ export const GET: APIRoute = async () => {
   try {
     // Minute-sized cache buster so a new special shows within about a minute everywhere.
     const res = await fetch(`${url}?v=${Math.floor(Date.now() / 60000)}`, { cache: 'no-store' });
-    if (!res.ok) return json({ error: 'no special posted yet' }, 404, 'public, s-maxage=30');
+    if (!res.ok) return json({ error: 'no special posted yet' }, 404);
     const data = (await res.json()) as Special;
     return json(data, 200, 'public, max-age=0, s-maxage=30, stale-while-revalidate=60');
   } catch {

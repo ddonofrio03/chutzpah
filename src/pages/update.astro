@@ -30,11 +30,11 @@ const labels = ["Today's Special", 'Breakfast Special', 'Lunch Special', 'Dinner
           <input name="title" maxlength="80" placeholder="BBQ Chicken Poutine" autocomplete="off" />
         </label>
         <label class="field">
-          Description <span class="opt">(optional)</span>
+          <span>Description <span class="opt">(optional)</span></span>
           <textarea name="description" maxlength="300" rows="3" placeholder="Hand cut fries, pepper jack, pulled BBQ chicken, cole slaw"></textarea>
         </label>
         <label class="field">
-          Price <span class="opt">(optional)</span>
+          <span>Price <span class="opt">(optional)</span></span>
           <input name="price" maxlength="30" placeholder="$15" inputmode="text" autocomplete="off" />
         </label>
 
@@ -122,7 +122,7 @@ const labels = ["Today's Special", 'Breakfast Special', 'Lunch Special', 'Dinner
   } catch {}
 
   // Start from what's on the site now.
-  fetch('/api/special/', { cache: 'no-store' })
+  fetch(`/api/special/?fresh=${Date.now()}`, { cache: 'no-store' })
     .then((r) => (r.ok ? (r.json() as Promise<Special>) : null))
     .then((s) => {
       if (s) {
