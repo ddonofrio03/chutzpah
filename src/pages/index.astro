@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import Letterboard from '../components/Letterboard.astro';
 import Newsletter from '../components/Newsletter.astro';
+import HolidayBanner from '../components/HolidayBanner.astro';
 import site from '../data/site.json';
 import menu from '../data/menu.json';
 import gallery from '../data/gallery.json';
@@ -63,6 +64,9 @@ const sample = sampleNames.map((f) => {
       </figure>
     </div>
   </section>
+
+  <!-- Only shows while a holiday menu is switched on in src/data/holiday.json -->
+  <HolidayBanner />
 
   <ul class="facts" aria-label="What we're about">
     <li>Breakfast &amp; So Much More</li>

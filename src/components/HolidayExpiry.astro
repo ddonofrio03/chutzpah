@@ -1,0 +1,15 @@
+---
+// Hides anything marked data-holiday-until="YYYY-MM-DD" once that day has passed in New York.
+---
+
+<script>
+  const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York' }).format(new Date());
+  document.querySelectorAll<HTMLElement>('[data-holiday-until]').forEach((el) => {
+    const until = el.dataset.holidayUntil;
+    if (until && today > until) el.hidden = true;
+  });
+  document.querySelectorAll<HTMLElement>('[data-holiday-fallback]').forEach((el) => {
+    const until = el.dataset.holidayFallback;
+    if (until && today > until) el.hidden = false;
+  });
+</script>

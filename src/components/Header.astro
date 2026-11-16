@@ -4,12 +4,15 @@ import site from '../data/site.json';
 import liberty from '../assets/photos/liberty.png';
 import OpenStatus from './OpenStatus.astro';
 import { hours } from '../lib/hours';
+import { activeHoliday, holidayUntil } from '../lib/holiday';
 
-const nav = [
+type NavItem = { href: string; label: string; holiday?: boolean };
+const nav: NavItem[] = [
   { href: '/our-menu/', label: 'Our Menu' },
+  // Only appears while a holiday menu is switched on in holiday.json
+  ...(activeHoliday ? [{ href: '/holidaymenu/', label: `${activeHoliday.name} Menu`, holiday: true }] : []),
   { href: '/btp/', label: 'By The Pound' },
   { href: '/catering/', label: 'Catering' },
-  { href: '/holidaymenu/', label: 'Holiday Menu' },
   { href: '/our-gallery/', label: 'Food Porn' },
   { href: '/about-us/', label: 'About Us' },
   { href: '/contact/', label: 'Contact & Directions' },
@@ -45,8 +48,12 @@ const weekday = hours[0];
       <ul>
         {
           nav.map((n) => (
-            <li>
-              <a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined}>
+            <li data-holiday-until={n.holiday && holidayUntil ? holidayUntil : undefined}>
+              <a
+                href={n.href}
+                class:list={{ 'is-holiday': n.holiday }}
+                aria-current={path.startsWith(n.href) ? 'page' : undefined}
+              >
                 {n.label}
               </a>
             </li>
@@ -172,6 +179,9 @@ const weekday = hours[0];
   .nav ul a[aria-current='page'] {
     color: #fff;
     border-bottom-color: var(--pastrami);
+  }
+  .nav ul a.is-holiday {
+    color: var(--mustard);
   }
   .order {
     min-height: 44px;

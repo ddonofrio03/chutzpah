@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import site from '../data/site.json';
 import logo from '../assets/photos/logo-full.png';
 import { hours } from '../lib/hours';
+import { activeHoliday, holidayUntil } from '../lib/holiday';
 const year = new Date().getFullYear();
 ---
 
@@ -43,7 +44,13 @@ const year = new Date().getFullYear();
       <ul>
         <li><a href={site.orderUrl}>Order Online</a></li>
         <li><a href="/catering/">Catering</a></li>
-        <li><a href="/holidaymenu/">Holiday Menu</a></li>
+        {
+          activeHoliday && (
+            <li data-holiday-until={holidayUntil || undefined}>
+              <a href="/holidaymenu/">{activeHoliday.name} Menu</a>
+            </li>
+          )
+        }
         <li><a href={site.jobsUrl}>Join the team</a></li>
         <li><a href={site.facebook}>Facebook</a></li>
         <li><a href={site.twitter}>Twitter</a></li>

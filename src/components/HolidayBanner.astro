@@ -1,0 +1,96 @@
+---
+// Banner shown on the home page and menu page while a holiday menu is active.
+import { activeHoliday, holidayUntil } from '../lib/holiday';
+import site from '../data/site.json';
+interface Props {
+  compact?: boolean;
+}
+const { compact = false } = Astro.props;
+const h = activeHoliday;
+---
+
+{
+  h && (
+    <section class:list={['holiday', { compact }]} data-holiday-until={holidayUntil || undefined} aria-label={`${h.name} menu`}>
+      <div class="wrap inner">
+        <div class="copy">
+          <span class="tag">Now taking {h.name} orders</span>
+          <h2 class="display">{h.title}</h2>
+          {!compact && <p class="blurb">{h.homeBlurb}</p>}
+          {h.dates && <p class="dates">{h.dates}</p>}
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-mustard" href="/holidaymenu/">
+            See the {h.name} Menu
+          </a>
+          {h.orderForm ? (
+            <a class="btn btn-light" href={h.orderForm}>
+              Order Online
+            </a>
+          ) : (
+            <a class="btn btn-light" href={site.phoneHref}>
+              Order: {site.phone}
+            </a>
+          )}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+<style>
+  .holiday {
+    background: var(--rye);
+    color: #fff;
+    border-bottom: 4px solid var(--mustard);
+    /* a thin row of "tickets" along the top, like the order rail over a deli counter */
+    background-image: repeating-linear-gradient(90deg, var(--mustard) 0 18px, transparent 18px 30px);
+    background-size: 100% 6px;
+    background-repeat: no-repeat;
+  }
+  .inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 20px 40px;
+    align-items: center;
+    padding-block: clamp(30px, 4vw, 44px);
+  }
+  .compact .inner {
+    padding-block: 22px;
+  }
+  .tag {
+    display: inline-block;
+    padding: 4px 10px;
+    background: var(--pastrami);
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  h2 {
+    margin-top: 12px;
+    font-size: clamp(24px, 3.2vw, 38px);
+    line-height: 1.05;
+  }
+  .compact h2 {
+    font-size: clamp(20px, 2.4vw, 28px);
+  }
+  .blurb {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #e8e4db;
+  }
+  .dates {
+    margin-top: 8px;
+    max-width: 70ch;
+    font-size: 15px;
+    color: #c9c3b7;
+    white-space: pre-line;
+  }
+  @media (max-width: 860px) {
+    .inner {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

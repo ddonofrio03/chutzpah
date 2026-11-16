@@ -1,62 +1,78 @@
 ---
+/*
+  Shows whichever holiday menu is switched on in src/data/holiday.json.
+  When none is on (or its showUntil date has passed), visitors see a short
+  "between holidays" note instead of an out-of-date menu.
+*/
 import Base from '../layouts/Base.astro';
 import MenuSection from '../components/MenuSection.astro';
 import site from '../data/site.json';
-import holiday from '../data/holiday.json';
-
-// The menu set as "current" in holiday.json shows first.
-const menus = [...holiday.menus].sort((a, b) => (a.id === holiday.current ? -1 : b.id === holiday.current ? 1 : 0));
-const current = menus[0];
-const rest = menus.slice(1);
+import { activeHoliday as h, holidayUntil } from '../lib/holiday';
 ---
 
 <Base
-  title="Holiday Menu | Chutzpah Deli, Fairfax VA"
-  description="Chutzpah Deli holiday catering menus: Break Fast, Rosh Hashanah and Passover platters, entrees and sides."
+  title={h ? `${h.name} Menu | Chutzpah Deli, Fairfax VA` : 'Holiday Menu | Chutzpah Deli, Fairfax VA'}
+  description="Chutzpah Deli holiday catering menus for Rosh Hashanah, Yom Kippur break fast and Passover."
 >
-  <section class="page-head">
-    <div class="wrap">
-      <span class="kicker">Holiday Menu</span>
-      <h1>{current.title}</h1>
-      {current.dates && <p class="dates">{current.dates}</p>}
-      <div class="btn-row btns">
-        <a class="btn btn-red" href={site.phoneHref}>Order: {site.phone}</a>
-      </div>
-    </div>
-  </section>
-
-  <div class="wrap body">
-    <div class="cols">
-      {current.sections.map((s) => <MenuSection section={s} />)}
-    </div>
-    {current.other_text.filter((t) => !t.includes('385')).map((t) => <p class="note">{t}</p>)}
-  </div>
-
   {
-    rest.map((m) => (
-      <section class="other" id={m.id}>
-        <div class="wrap">
-          <h2 class="section-title">{m.title}</h2>
-          {m.dates && <p class="dates-dark">{m.dates}</p>}
-          <div class="cols">
-            {m.sections.map((s) => (
-              <MenuSection section={s} />
-            ))}
+    h && (
+      <div data-holiday-until={holidayUntil || undefined}>
+        <section class="page-head">
+          <div class="wrap">
+            <span class="kicker">Holiday Menu</span>
+            <h1>{h.title}</h1>
+            {h.dates && <p class="dates">{h.dates}</p>}
+            <div class="btn-row btns">
+              {h.orderForm && (
+                <a class="btn btn-red" href={h.orderForm}>
+                  Order Online
+                </a>
+              )}
+              <a class={h.orderForm ? 'btn btn-light' : 'btn btn-red'} href={site.phoneHref}>
+                Order: {site.phone}
+              </a>
+              {h.pdf && (
+                <a class="btn btn-light" href={h.pdf}>
+                  Download the menu (PDF)
+                </a>
+              )}
+            </div>
           </div>
-          {m.other_text
+        </section>
+
+        <div class="wrap body">
+          {h.sections.length > 0 && (
+            <div class="cols">
+              {h.sections.map((s) => (
+                <MenuSection section={s} />
+              ))}
+            </div>
+          )}
+          {h.image && <img class="menu-img" src={h.image} alt={`${h.title}`} />}
+          {h.other_text
             .filter((t) => !t.includes('385'))
             .map((t) => (
               <p class="note">{t}</p>
             ))}
-          {m.id.startsWith('passover') && (
-            <a class="btn btn-red" href="/passover-order/">
-              Place a Passover order
-            </a>
-          )}
         </div>
-      </section>
-    ))
+      </div>
+    )
   }
+
+  <section class="page-head" data-holiday-fallback={h ? holidayUntil || undefined : undefined} hidden={h ? true : undefined}>
+    <div class="wrap">
+      <span class="kicker">Holiday Menu</span>
+      <h1>Between holidays</h1>
+      <p>
+        Our holiday menus go up before Rosh Hashanah, Yom Kippur and Passover. Planning something now? Call {site.phone} and ask for
+        Eric, or see the catering menu.
+      </p>
+      <div class="btn-row btns">
+        <a class="btn btn-red" href="/catering/">See the Catering Menu</a>
+        <a class="btn btn-light" href={site.phoneHref}>Call {site.phone}</a>
+      </div>
+    </div>
+  </section>
 </Base>
 
 <style>
@@ -72,29 +88,18 @@ const rest = menus.slice(1);
   .cols {
     columns: 2 420px;
     column-gap: clamp(32px, 5vw, 64px);
-    margin-top: 28px;
   }
   .cols > :global(*) {
     margin-bottom: 40px;
   }
+  .menu-img {
+    width: 100%;
+    max-width: 900px;
+    margin-inline: auto;
+    box-shadow: var(--shadow);
+  }
   .note {
     font-weight: 700;
     color: var(--pastrami);
-  }
-  .other {
-    padding-block: clamp(48px, 6vw, 80px);
-    border-top: 1px solid var(--grout);
-  }
-  .other:nth-of-type(odd) {
-    background: var(--tile-2);
-  }
-  .dates-dark {
-    margin-top: 12px;
-    max-width: 70ch;
-    color: var(--muted);
-    white-space: pre-line;
-  }
-  .other .btn {
-    margin-top: 12px;
   }
 </style>

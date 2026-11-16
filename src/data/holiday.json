@@ -1,10 +1,22 @@
 {
-  "current": "break-fast-2026",
+  "_howto": [
+    "To SHOW a holiday menu: set \"active\" to that menu id (for example \"rosh-hashanah-2026\").",
+    "To HIDE it: set \"active\" to null. Setting \"showUntil\" (YYYY-MM-DD) also hides it automatically after that day.",
+    "New holiday: copy last year's menu block below, give it a new id, then change the title, dates and prices.",
+    "No time to type the menu? Put the menu image in public/files/ and set \"image\" to \"/files/your-file.jpg\" (or \"pdf\" for a PDF). The sections list can stay empty."
+  ],
+  "active": null,
+  "showUntil": null,
   "menus": [
     {
       "id": "break-fast-2026",
+      "name": "Break Fast",
       "title": "Chutzpah Deli Break Fast Catering Menu 2026",
+      "homeBlurb": "Yom Kippur break fast platters: smoked fish, bagels, kugel and more.",
       "dates": "Please place your order by Thursday September 24th, no later than 3 PM. Orders will be ready by, and need to be picked up Sunday September 20th between 10 AM and 2:30 PM .",
+      "image": null,
+      "pdf": null,
+      "orderForm": null,
       "sections": [
         {
           "title": "SMOKED FISH PLATTERS",
@@ -118,8 +130,13 @@
     },
     {
       "id": "rosh-hashanah-2026",
+      "name": "Rosh Hashanah",
       "title": "ROSH HASHANAH CATERING MENU 2026",
+      "homeBlurb": "Brisket, chicken soup, kugel, kasha varnishkes and all the sides.",
       "dates": "Please place orders by noon Friday September 4th to ensure that we are able to fill your order completely. Orders will be available for pick up Thursday, September 10th after 11AM",
+      "image": null,
+      "pdf": null,
+      "orderForm": null,
       "sections": [
         {
           "title": "Soup",
@@ -244,8 +261,13 @@
     },
     {
       "id": "passover-2026",
+      "name": "Passover",
       "title": "PASSOVER MENU 2026",
+      "homeBlurb": "Brisket, matzo ball soup, gefilte fish, kugel and more for your seder.",
       "dates": "TO GUARANTEE COMPLETION OF YOUR ORDER, ALL ORDERS MUST BE PLACED BY 3PM WEDNESDAY March 25\nAll orders will be available for pick up starting Wednesday April 1st.",
+      "image": null,
+      "pdf": null,
+      "orderForm": "/passover-order/",
       "sections": [
         {
           "title": "Appetizers, Hors D’Oeuvers and First Courses",
