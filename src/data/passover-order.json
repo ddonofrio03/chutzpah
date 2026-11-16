@@ -1,0 +1,41 @@
+{
+  "title": "PASSOVER ORDER 2026",
+  "show": true,
+  "note": "After submitting, you will receive a confirmation. We will follow up with your order total.",
+  "dessertNote": "Ask us about our Passover dessert selections!",
+  "groups": [
+    {
+      "title": "Appetizers / Hors D’Oeuvres",
+      "items": [
+        { "name": "Chopped Liver", "price": "$20.00 / lb", "field": "Chopped Liver (lbs)", "unit": "lb" },
+        { "name": "Mini Potato Latkes", "price": "$30.00 / doz", "field": "Mini Potato Latkes (doz)", "unit": "ea" },
+        { "name": "Mini Sweet Potato & Pecan Latkes", "price": "$30.00 / doz", "field": "Mini Sweet Potato Pecan Latkes (doz)", "unit": "ea" },
+        { "name": "Chicken Soup", "price": "$15.00 / qt", "field": "Chicken Soup (qts)", "unit": "ea" },
+        { "name": "Matzo Balls", "price": "$2.50 ea", "field": "Matzo Balls (ea)", "unit": "ea" },
+        { "name": "Gefilte Fish", "price": "$3.50 ea", "field": "Gefilte Fish (ea)", "unit": "ea" },
+        { "name": "Charoset", "price": "$17.00 / lb", "field": "Charoset (lbs)", "unit": "lb" },
+        { "name": "Stuffed Cabbage", "price": "$7.00 ea", "field": "Stuffed Cabbage (ea)", "unit": "ea" }
+      ]
+    },
+    {
+      "title": "Entrees",
+      "items": [
+        { "name": "Beef Brisket with Gravy", "price": "$30.00 / lb", "field": "Beef Brisket with Gravy (lbs)", "unit": "lb" },
+        { "name": "Dijon Pistachio Crusted Salmon (8 oz)", "price": "$16.00 ea", "field": "Dijon Pistachio Salmon (ea)", "unit": "ea" },
+        { "name": "Chicken Al Pastor", "price": "$18.00 / lb", "field": "Chicken Al Pastor (lbs)", "unit": "lb" },
+        { "name": "Apricot Glazed Roasted 1/2 Chicken", "price": "$17.00 ea", "field": "Apricot Glazed Half Chicken (ea)", "unit": "ea" }
+      ]
+    },
+    {
+      "title": "Side Dishes & Accompaniments",
+      "items": [
+        { "name": "Cranberry & Walnut Compote", "price": "$12.00 / lb", "field": "Cranberry Walnut Compote (lbs)", "unit": "lb" },
+        { "name": "Potato Kugel", "price": "$30.00 / 2lb tray", "field": "Potato Kugel (2lb trays)", "unit": "ea" },
+        { "name": "Mexican Inspired Quinoa Salad", "price": "$15.00 / lb", "field": "Quinoa Salad (lbs)", "unit": "lb" },
+        { "name": "Hot Honey & Orange Carrots", "price": "$16.00 / lb", "field": "Hot Honey Orange Carrots (lbs)", "unit": "lb" },
+        { "name": "Lemon Scented Broccoli", "price": "$14.00 / lb", "field": "Lemon Scented Broccoli (lbs)", "unit": "lb" },
+        { "name": "Homemade Apple Sauce", "price": "$12.00 / lb", "field": "Homemade Apple Sauce (lbs)", "unit": "lb" }
+      ]
+    }
+  ]
+}

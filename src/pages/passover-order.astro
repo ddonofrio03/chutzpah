@@ -1,0 +1,147 @@
+---
+// Passover pre-order form. Submissions are emailed to Eric through formsubmit.co, same as the old site.
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+import order from '../data/passover-order.json';
+
+const lbs = ['0', '0.5', '1', '1.5', '2', '2.5', '3', '4', '5'];
+const each = ['0', '1', '2', '3', '4', '5', '6', '8', '10', '12'];
+const thanks = new URL('/thank-you/', Astro.site).toString();
+---
+
+<Base title="Passover Order | Chutzpah Deli" description="Order your Passover brisket, matzo ball soup, latkes, kugel and more from Chutzpah Deli in Fairfax VA.">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="kicker">Chutzpah Deli · Order Form</span>
+      <h1>{order.title}</h1>
+      <p>Pick your quantities and we'll follow up with your total. Questions? Call <a href={site.phoneHref}>{site.phone}</a>.</p>
+    </div>
+  </section>
+
+  <form class="wrap order" action={site.formAction} method="POST">
+    <input type="hidden" name="_subject" value="New Passover Order" />
+    <input type="hidden" name="_template" value="table" />
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_next" value={thanks} />
+    <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+    <fieldset class="who">
+      <legend class="display">Your details</legend>
+      <label class="field">Name<input type="text" name="Name" required autocomplete="name" /></label>
+      <label class="field">Email<input type="email" name="Email" required autocomplete="email" /></label>
+      <label class="field">Phone<input type="tel" name="Phone" required autocomplete="tel" /></label>
+      <label class="field">Day / Time of Pick Up<input type="datetime-local" name="Pickup Day and Time" required /></label>
+    </fieldset>
+
+    {
+      order.groups.map((g) => (
+        <fieldset class="group">
+          <legend class="display">{g.title}</legend>
+          {g.items.map((i) => (
+            <label class="row">
+              <span class="name">
+                {i.name}
+                <span class="price">{i.price}</span>
+              </span>
+              <select name={i.field}>
+                {(i.unit === 'lb' ? lbs : each).map((q) => (
+                  <option value={q}>{q}</option>
+                ))}
+              </select>
+            </label>
+          ))}
+        </fieldset>
+      ))
+    }
+
+    <fieldset class="group">
+      <legend class="display">Desserts</legend>
+      <p>{order.dessertNote}</p>
+    </fieldset>
+
+    <label class="field full">Special Instructions<textarea name="Special Instructions"></textarea></label>
+
+    <div class="submit">
+      <button type="submit" class="btn btn-red">Submit Order</button>
+      <p>{order.note}</p>
+    </div>
+  </form>
+</Base>
+
+<style>
+  .page-head a {
+    color: var(--mustard);
+  }
+  .order {
+    display: grid;
+    gap: 28px;
+    padding-block: clamp(40px, 6vw, 72px);
+    max-width: 860px;
+  }
+  .hp {
+    position: absolute;
+    left: -5000px;
+  }
+  fieldset {
+    margin: 0;
+    padding: 24px;
+    border: 1px solid var(--grout);
+    border-top: 4px solid var(--rye);
+    background: #fff;
+  }
+  legend {
+    padding: 0 8px;
+    margin-left: -8px;
+    font-size: 22px;
+  }
+  .who {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--grout);
+  }
+  .row:last-child {
+    border-bottom: 0;
+  }
+  .name {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+  }
+  .price {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--pastrami);
+  }
+  select {
+    min-width: 84px;
+    min-height: 44px;
+    padding: 0 10px;
+    font: 600 16px var(--body);
+    border: 2px solid var(--grout);
+    border-radius: var(--radius);
+    background: #fff;
+  }
+  .submit {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+  }
+  .submit p {
+    color: var(--muted);
+    font-size: 15px;
+  }
+  @media (max-width: 600px) {
+    .who {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

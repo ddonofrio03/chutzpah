@@ -1,0 +1,53 @@
+---
+import Base from '../layouts/Base.astro';
+import MenuSection from '../components/MenuSection.astro';
+import site from '../data/site.json';
+import btp from '../data/by-the-pound.json';
+---
+
+<Base
+  title="By The Pound | Deli Meats, Smoked Fish & Salads | Chutzpah Deli"
+  description="House cured corned beef, slow smoked pastrami, smoked fish, cheeses and home made salads by the pound from Chutzpah Deli in Fairfax VA."
+>
+  <section class="page-head">
+    <div class="wrap">
+      <span class="kicker">Take it home</span>
+      <h1>{btp.title}</h1>
+      <p>{btp.intro}. Meats sliced to order by the 1/2 lb. Call ahead and we'll have it ready: <a href={site.phoneHref}>{site.phone}</a>.</p>
+    </div>
+  </section>
+
+  <div class="wrap body">
+    <div class="cols">
+      {btp.sections.map((s) => <MenuSection section={s} />)}
+    </div>
+    <aside class="fine-print">
+      {btp.footnotes.map((f) => <p>{f}</p>)}
+    </aside>
+  </div>
+</Base>
+
+<style>
+  .page-head a {
+    color: var(--mustard);
+  }
+  .body {
+    padding-block: clamp(48px, 6vw, 80px);
+  }
+  .cols {
+    columns: 2 420px;
+    column-gap: clamp(32px, 5vw, 64px);
+  }
+  .cols > :global(*) {
+    margin-bottom: 40px;
+  }
+  .fine-print {
+    margin-top: 16px;
+    padding-top: 20px;
+    border-top: 1px solid var(--grout);
+    display: grid;
+    gap: 6px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+</style>

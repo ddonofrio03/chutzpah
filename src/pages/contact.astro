@@ -1,0 +1,186 @@
+---
+import Base from '../layouts/Base.astro';
+import OpenStatus from '../components/OpenStatus.astro';
+import site from '../data/site.json';
+import { hours } from '../lib/hours';
+const thanks = new URL('/thank-you/', Astro.site).toString();
+---
+
+<Base title="Contact & Directions | Chutzpah Deli, Fairfax VA" description="Chutzpah Deli, 12214 Fairfax Towne Center, Fairfax VA 22033. Phone (703) 385-8883. Hours, directions and a message form.">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="kicker">Reach out to</span>
+      <h1>Chutzpah Deli</h1>
+      <p><OpenStatus>Hours below</OpenStatus></p>
+    </div>
+  </section>
+
+  <section class="wrap grid">
+    <div class="info">
+      <div class="block">
+        <h2>Phone</h2>
+        <a class="big" href={site.phoneHref}>{site.phone}</a>
+      </div>
+      <div class="block">
+        <h2>Fax</h2>
+        <p class="big">{site.fax}</p>
+      </div>
+      <div class="block">
+        <h2>Address</h2>
+        <p class="big">
+          {site.address.street}<br />{site.address.city}, {site.address.state}
+          {site.address.zip}
+        </p>
+        <a href={site.mapsUrl}>Get directions in Google Maps</a>
+      </div>
+      <div class="block">
+        <h2>Hours</h2>
+        <dl>
+          {
+            hours.map((h) => (
+              <div>
+                <dt>{h.label}</dt>
+                <dd>{h.text}</dd>
+              </div>
+            ))
+          }
+        </dl>
+        <p class="small">{site.breakfastNote}</p>
+      </div>
+    </div>
+
+    <div class="map">
+      <iframe src={site.mapEmbed} title="Map to Chutzpah Deli at Fairfax Towne Center" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </section>
+
+  <section class="msg">
+    <div class="wrap msg-grid">
+      <div>
+        <span class="kicker">Send us a</span>
+        <h2 class="section-title">Message</h2>
+        <p class="lede">For catering, call the store and ask for Eric. For everything else, drop us a line.</p>
+      </div>
+      <form action={site.formAction} method="POST" class="form">
+        <input type="hidden" name="_subject" value="Message from chutzpahdeli.com" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value={thanks} />
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <label class="field">Name<input type="text" name="name" required autocomplete="name" /></label>
+        <label class="field">Email<input type="email" name="email" required autocomplete="email" /></label>
+        <label class="field">Message<textarea name="message" required></textarea></label>
+        <button type="submit" class="btn btn-red">Send Message</button>
+      </form>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+    gap: clamp(28px, 5vw, 64px);
+    padding-block: clamp(48px, 6vw, 80px);
+  }
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 28px;
+    align-content: start;
+  }
+  .block h2 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--pastrami);
+    margin-bottom: 8px;
+  }
+  .big {
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--rye);
+    text-decoration: none;
+    line-height: 1.35;
+  }
+  a.big:hover {
+    color: var(--pastrami);
+  }
+  .block p + a {
+    display: inline-block;
+    margin-top: 8px;
+    font-weight: 600;
+  }
+  .block:last-child {
+    grid-column: 1 / -1;
+  }
+  dl {
+    margin: 0;
+    max-width: 380px;
+  }
+  dl div {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--grout);
+  }
+  dt {
+    font-weight: 700;
+  }
+  dd {
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+  }
+  .small {
+    margin-top: 10px;
+    font-size: 15px;
+    color: var(--muted);
+  }
+  .map {
+    min-height: 420px;
+    border: 1px solid var(--grout);
+  }
+  .map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    border: 0;
+    display: block;
+  }
+  .msg {
+    background: var(--tile-2);
+    border-top: 1px solid var(--grout);
+    padding-block: clamp(48px, 6vw, 80px);
+  }
+  .msg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: clamp(28px, 5vw, 64px);
+  }
+  .msg .lede {
+    margin-top: 14px;
+  }
+  .form {
+    display: grid;
+    gap: 16px;
+  }
+  .form .btn {
+    justify-self: start;
+  }
+  .hp {
+    position: absolute;
+    left: -5000px;
+  }
+  @media (max-width: 900px) {
+    .grid,
+    .msg-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 480px) {
+    .info {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

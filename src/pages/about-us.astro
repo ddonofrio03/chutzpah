@@ -1,0 +1,218 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Newsletter from '../components/Newsletter.astro';
+import about from '../data/about.json';
+import owners from '../assets/photos/owners.jpg';
+import matzoMan from '../assets/photos/eric-matzo-man.jpg';
+import eatingOut from '../assets/photos/eating-out-clipping.jpg';
+import dumplings from '../assets/photos/wapo-dumplings.jpg';
+import sandwich from '../assets/photos/turkey-sandwich.jpg';
+---
+
+<Base
+  title="About Us | Chutzpah Deli, Fairfax VA"
+  description="Since 2001, Chutzpah has been a REAL New York deli in Fairfax VA. Read what the Washington Post and Centre View said, and our 6 simple rules."
+>
+  <section class="page-head">
+    <div class="wrap">
+      <span class="kicker">Since 2001</span>
+      <h1>About Chutzpah Deli</h1>
+    </div>
+  </section>
+
+  <!-- Washington Post, 2001 -->
+  <section class="wrap press first">
+    <div class="clip">
+      <Image src={owners} alt="Chutzpah's owners in front of the deli's Lady Liberty sign, 2001" widths={[400, 600]} sizes="(max-width: 860px) 100vw, 420px" />
+    </div>
+    <article class="story">
+      <span class="kicker">{about.wapo.source}</span>
+      <h2 class="section-title">{about.wapo.headline}</h2>
+      {about.wapo.body.map((p) => <p>{p}</p>)}
+      <p class="credit">{about.wapo.credit}</p>
+    </article>
+  </section>
+
+  <!-- Centre View -->
+  <section class="pull">
+    <div class="wrap pull-grid">
+      <blockquote>
+        {about.centreView.body.map((p) => <p>{p}</p>)}
+        <cite>{about.centreView.credit}</cite>
+      </blockquote>
+      <Image src={sandwich} alt="A turkey sandwich with cranberry and a pickle" widths={[500, 900]} sizes="(max-width: 860px) 100vw, 460px" />
+    </div>
+  </section>
+
+  <!-- Eating Out -->
+  <section class="wrap press">
+    <div class="clip stack">
+      <Image src={eatingOut} alt="Eating Out, by Michael Birchenall, newspaper clipping" />
+      <Image src={matzoMan} alt="Matzo man: owner Eric Roller serves matzo ball soup in his new Chutzpah deli in Fairfax Towne Center" />
+      <p class="cap">MATZO MAN: Owner Eric Roller serves matzo ball soup in his new Chutzpah deli in Fairfax Towne Center.</p>
+      <Image src={dumplings} alt="The Washington Post: A guide to Washington's most delicious dumplings, featuring Chutzpah's kreplach" widths={[400, 700]} sizes="(max-width: 860px) 100vw, 420px" />
+    </div>
+    <article class="story">
+      <h2 class="section-title">{about.eatingOut.headline}</h2>
+      <p class="byline">{about.eatingOut.byline}</p>
+      {about.eatingOut.body.map((p) => <p>{p}</p>)}
+    </article>
+  </section>
+
+  <!-- Rules -->
+  <section class="rules" id="rules">
+    <div class="wrap">
+      <h2 class="section-title">Six Simple Rules</h2>
+      <p class="rules-sub">To Eat At Chutzpah Deli</p>
+      <ol>
+        {
+          about.rules.map((r) => (
+            <li>
+              <strong>{r.rule}</strong>
+              <span>{r.why}</span>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <Newsletter />
+</Base>
+
+<style>
+  .press {
+    display: grid;
+    grid-template-columns: 420px minmax(0, 1fr);
+    gap: clamp(32px, 6vw, 80px);
+    padding-block: clamp(48px, 6vw, 88px);
+    align-items: start;
+  }
+  .clip {
+    position: sticky;
+    top: 104px;
+  }
+  .clip img {
+    width: 100%;
+    filter: grayscale(1) contrast(1.05);
+    box-shadow: var(--shadow);
+  }
+  .stack {
+    display: grid;
+    gap: 16px;
+  }
+  .stack img {
+    background: #fff;
+    padding: 8px;
+  }
+  .cap {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: -8px;
+  }
+  .story > * + * {
+    margin-top: 18px;
+  }
+  .story p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 66ch;
+  }
+  .credit,
+  .byline {
+    font-weight: 700;
+    color: var(--muted);
+    font-size: 15px !important;
+  }
+  .pull {
+    background: var(--rye);
+    color: #e8e4db;
+  }
+  .pull-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) 1fr;
+    gap: clamp(32px, 6vw, 80px);
+    align-items: center;
+    padding-block: clamp(56px, 7vw, 96px);
+  }
+  .pull-grid img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  blockquote {
+    margin: 0;
+  }
+  blockquote p {
+    font-size: clamp(19px, 1.9vw, 23px);
+    line-height: 1.55;
+  }
+  blockquote p + p {
+    margin-top: 16px;
+  }
+  cite {
+    display: block;
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--mustard);
+  }
+
+  .rules {
+    background: var(--pastrami);
+    color: #fff;
+    padding-block: clamp(56px, 7vw, 96px);
+  }
+  .rules-sub {
+    margin-top: 8px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #ffd9a1;
+  }
+  .rules ol {
+    counter-reset: rule;
+    list-style: none;
+    margin: 36px 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2px;
+    background: rgba(0, 0, 0, 0.18);
+    border: 2px solid rgba(0, 0, 0, 0.18);
+  }
+  .rules li {
+    counter-increment: rule;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 26px 26px 30px;
+    background: var(--pastrami);
+  }
+  .rules li::before {
+    content: counter(rule);
+    font-family: var(--display);
+    font-size: 44px;
+    line-height: 1;
+    color: var(--mustard);
+  }
+  .rules strong {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  .rules span {
+    color: #ffe9e5;
+    font-size: 16px;
+  }
+  @media (max-width: 960px) {
+    .press,
+    .pull-grid {
+      grid-template-columns: 1fr;
+    }
+    .clip {
+      position: static;
+      max-width: 480px;
+    }
+  }
+</style>

@@ -1,0 +1,287 @@
+{
+  "title": "By The Pound",
+  "intro": "Gourmet Meats and Smoked Fish",
+  "sections": [
+    {
+      "title": "Meats",
+      "items": [
+        {
+          "name": "House Cured Corned Beef",
+          "description": null,
+          "price": "$17 - ½ LB"
+        },
+        {
+          "name": "First Cut Corned Beef (Extra Lean)",
+          "description": null,
+          "price": "$18 - ½ LB"
+        },
+        {
+          "name": "Slow Smoked Pastrami",
+          "description": null,
+          "price": "$17 - ½ LB"
+        },
+        {
+          "name": "House Roasted Brisket",
+          "description": null,
+          "price": "$17 - ½ LB"
+        },
+        {
+          "name": "Pickled Tongue",
+          "description": null,
+          "price": "$18 - ½ LB"
+        },
+        {
+          "name": "House Made Roast Beef",
+          "description": null,
+          "price": "$ 14 - ½ LB",
+          "marks": [
+            "*"
+          ]
+        },
+        {
+          "name": "Fresh Roasted Turkey Breast",
+          "description": null,
+          "price": "$ 14 - ½ LB"
+        },
+        {
+          "name": "Spicy Turkey Breast",
+          "description": null,
+          "price": "$ 14 - ½ LB"
+        },
+        {
+          "name": "Mesquite Smoked Turkey Breast",
+          "description": null,
+          "price": "$ 14 - ½ LB"
+        },
+        {
+          "name": "Turkey Breast Pastrami",
+          "description": null,
+          "price": "$ 14 - ½ LB"
+        },
+        {
+          "name": "Boiled Ham",
+          "description": null,
+          "price": "$ 14 - ½ LB"
+        },
+        {
+          "name": "Baked Ham",
+          "description": null,
+          "price": "$ 14 - ½ LB"
+        },
+        {
+          "name": "Bologna",
+          "description": null,
+          "price": "$ 13 - ½ LB"
+        },
+        {
+          "name": "Liverwurst",
+          "description": null,
+          "price": "$ 12 - ½ LB"
+        },
+        {
+          "name": "Kosher Salami",
+          "description": null,
+          "price": "$16 - ½ LB"
+        },
+        {
+          "name": "Kosher Bologna",
+          "description": null,
+          "price": "$16 - ½ LB"
+        },
+        {
+          "name": "Franks (Kosher)",
+          "description": null,
+          "price": "$ 12 - ½ LB"
+        },
+        {
+          "name": "Knockwurst",
+          "description": null,
+          "price": "$ 12 - ½ LB"
+        },
+        {
+          "name": "Chopped Chicken Liver",
+          "description": null,
+          "price": "$ 12 - ½ LB"
+        }
+      ],
+      "footnotes": [
+        "* May contain raw or undercooked ingredients. Consuming raw or undercooked food may increase your risk of foodborne illness"
+      ],
+      "subtitle": "Sliced to order by the 1/2 LB."
+    },
+    {
+      "title": "Smoked Fish",
+      "items": [
+        {
+          "name": "Nova Salmon",
+          "description": null,
+          "price": "$ 24 - ½ LB",
+          "marks": [
+            "**"
+          ]
+        },
+        {
+          "name": "Belly Lox (Salty)",
+          "description": null,
+          "price": "$ 28 - ½ LB",
+          "marks": [
+            "**"
+          ]
+        },
+        {
+          "name": "Smoked Whitefish",
+          "description": null,
+          "price": "$ 14 - ½ LB"
+        },
+        {
+          "name": "Smoked Whitefish Salad",
+          "description": null,
+          "price": "$ 14 - ½ LB"
+        },
+        {
+          "name": "Baked Salmon Salad",
+          "description": null,
+          "price": "$ 24 - ½ LB"
+        },
+        {
+          "name": "Pickled Herring (Homemade Cream Sauce)",
+          "description": null,
+          "price": "$ 14 - ½ LB"
+        },
+        {
+          "name": "Pickled Herring (Wine Sauce)",
+          "description": null,
+          "price": "$ 13 - ½ LB"
+        }
+      ],
+      "footnotes": [
+        "** Nova Salmon and Belly Lox are cold smoked."
+      ]
+    },
+    {
+      "title": "Cheeses and Home Made Salads",
+      "items": [
+        {
+          "name": "American",
+          "description": null,
+          "price": "$ 14 / LB"
+        },
+        {
+          "name": "Sharp Cheddar",
+          "description": null,
+          "price": "$ 14 / LB"
+        },
+        {
+          "name": "Imported Swiss",
+          "description": null,
+          "price": "$ 16 / LB"
+        },
+        {
+          "name": "Whole Milk Mozzarella",
+          "description": null,
+          "price": "$ 14 / LB"
+        },
+        {
+          "name": "Muenster",
+          "description": null,
+          "price": "$ 14 / LB"
+        },
+        {
+          "name": "Pepper Jack",
+          "description": null,
+          "price": "$ 14 / LB"
+        },
+        {
+          "name": "Plain Cream Cheese",
+          "description": null,
+          "price": "$ 12 / LB"
+        },
+        {
+          "name": "Veggie Cream Cheese",
+          "description": null,
+          "price": "$ 13 / LB"
+        },
+        {
+          "name": "Chive Cream Cheese",
+          "description": null,
+          "price": "$ 13 / LB"
+        },
+        {
+          "name": "Flavored Cream Cheese",
+          "description": null,
+          "price": "$ 13 / LB"
+        },
+        {
+          "name": "Lox Supreme Cream Cheese",
+          "description": null,
+          "price": "$ 15 / LB",
+          "marks": [
+            "**"
+          ]
+        }
+      ],
+      "footnotes": [
+        "** Nova Salmon and Belly Lox are cold smoked."
+      ]
+    },
+    {
+      "title": "Salads",
+      "items": [
+        {
+          "name": "Albacore Tuna Salad",
+          "description": null,
+          "price": "$ 15 / LB"
+        },
+        {
+          "name": "Creamy Egg Salad",
+          "description": null,
+          "price": "$ 12 / LB"
+        },
+        {
+          "name": "Gourmet Chicken Salad",
+          "description": null,
+          "price": "$ 15 / LB"
+        },
+        {
+          "name": "Jumbo Shrimp Salad",
+          "description": null,
+          "price": "$ 25 / LB"
+        },
+        {
+          "name": "Potato Salad",
+          "description": null,
+          "price": "$ 9 / LB"
+        },
+        {
+          "name": "Cole Slaw",
+          "description": null,
+          "price": "$ 9 / LB"
+        },
+        {
+          "name": "Macaroni Salad",
+          "description": null,
+          "price": "$ 9 / LB"
+        },
+        {
+          "name": "Cranberry Compote",
+          "description": null,
+          "price": "$ 14 / LB"
+        },
+        {
+          "name": "Sauerkraut",
+          "description": null,
+          "price": "$ 10 / LB"
+        },
+        {
+          "name": "House Made Apple Sauce",
+          "description": null,
+          "price": "$ 14 / LB"
+        }
+      ]
+    }
+  ],
+  "footnotes": [
+    "* May contain raw or undercooked ingredients. Consuming raw or undercooked food may increase your risk of foodborne illness",
+    "** Nova Salmon and Belly Lox are cold smoked."
+  ]
+}

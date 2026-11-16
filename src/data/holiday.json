@@ -1,0 +1,363 @@
+{
+  "current": "break-fast-2026",
+  "menus": [
+    {
+      "id": "break-fast-2026",
+      "title": "Chutzpah Deli Break Fast Catering Menu 2026",
+      "dates": "Please place your order by Thursday September 24th, no later than 3 PM. Orders will be ready by, and need to be picked up Sunday September 20th between 10 AM and 2:30 PM .",
+      "sections": [
+        {
+          "title": "SMOKED FISH PLATTERS",
+          "note": "All smoked fish platters come with bagels and bialy’s (1 ½ p.p.), Plain cream cheese, vegetable cream cheese, tomatoes, and onions.",
+          "items": [
+            {
+              "name": "You choose:",
+              "description": "Nova, Belly lox, Herring in cream or wine sauce, Whitefish, Baked Salmon Salad Whitefish salad, or Kippered salmon.",
+              "price": null,
+              "options": [
+                {
+                  "label": "1 item",
+                  "price": "$ 21pp"
+                },
+                {
+                  "label": "2 item",
+                  "price": "$ 23pp"
+                },
+                {
+                  "label": "3 item",
+                  "price": "$ 25pp"
+                },
+                {
+                  "label": "4 item",
+                  "price": "$ 27pp"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "THE CHUTZPAH SMOKED FISH PLATTER",
+          "items": [
+            {
+              "name": "THE CHUTZPAH SMOKED FISH PLATTER",
+              "description": "A jumbo smoked whitefish stuffed with whitefish salad. The tray also includes kippered salmon, nova and belly lox, herring in cream and wine sauce, plain and veggie cream cheese, tomatoes, onions, cucumbers, olives, and capers, imported Swiss and Muenster cheeses, bagels and bialy’s.",
+              "price": "$ 30pp"
+            }
+          ]
+        },
+        {
+          "title": "OTHER IMPORTANT THINGS",
+          "items": [
+            {
+              "name": "Mushrooms, Eggs, & Onions Salad",
+              "description": null,
+              "price": "$ 15lb"
+            },
+            {
+              "name": "Tuna Salad",
+              "description": null,
+              "price": "$ 15lb"
+            },
+            {
+              "name": "Baked Salmon Salad",
+              "description": null,
+              "price": "$ 48lb"
+            },
+            {
+              "name": "Apricot Noodle Kugel",
+              "description": null,
+              "price": "$ 32 (2 lb tray)"
+            },
+            {
+              "name": "Chopped Chicken Liver",
+              "description": null,
+              "price": "$ 24lb"
+            },
+            {
+              "name": "Golden Cheese Blintzes",
+              "description": null,
+              "price": "$ 5 each (minimum 20)"
+            },
+            {
+              "name": "Bagels (Direct from NYC)",
+              "description": null,
+              "price": "$ 1.65 each"
+            },
+            {
+              "name": "Plain Cream Cheese",
+              "description": null,
+              "price": "$ 12.00 lb"
+            },
+            {
+              "name": "Veggie Cream Cheese",
+              "description": null,
+              "price": "$ 13.00 lb"
+            },
+            {
+              "name": "Chive Cream Cheese",
+              "description": null,
+              "price": "$ 13.00 lb"
+            },
+            {
+              "name": "Flavored Cream Cheese",
+              "description": null,
+              "price": "$13.00 lb"
+            },
+            {
+              "name": "Lox Supreme Cream Cheese",
+              "description": null,
+              "price": "$ 15.00 lb"
+            }
+          ]
+        }
+      ],
+      "other_text": [
+        "703-385-8883",
+        "8 person minimum on all platter"
+      ]
+    },
+    {
+      "id": "rosh-hashanah-2026",
+      "title": "ROSH HASHANAH CATERING MENU 2026",
+      "dates": "Please place orders by noon Friday September 4th to ensure that we are able to fill your order completely. Orders will be available for pick up Thursday, September 10th after 11AM",
+      "sections": [
+        {
+          "title": "Soup",
+          "items": [
+            {
+              "name": "Chicken Noodle",
+              "description": null,
+              "price": "$ 17.00 qt"
+            },
+            {
+              "name": "Matzo Balls",
+              "description": null,
+              "price": "$ 2.50 ea"
+            },
+            {
+              "name": "Kreplach",
+              "description": null,
+              "price": "$ 3.50 ea"
+            }
+          ]
+        },
+        {
+          "title": "Appetizers",
+          "items": [
+            {
+              "name": "Stuffed Cabbage (2 per order)",
+              "description": null,
+              "price": "$ 16.00/2pcs"
+            },
+            {
+              "name": "Fried Kreplach/Chutzpah Onions",
+              "description": null,
+              "price": "$ 4.00 ea"
+            },
+            {
+              "name": "Chopped Liver",
+              "description": null,
+              "price": "$ 24.00 lb"
+            }
+          ]
+        },
+        {
+          "title": "Entrees",
+          "items": [
+            {
+              "name": "Brisket with Caramelized Onions & Mushroom Gravy",
+              "description": null,
+              "price": "$ 36.00 lb"
+            },
+            {
+              "name": "Dijon and Panko Crusted Salmon(8oz)",
+              "description": null,
+              "price": "$ 17.00 ea"
+            },
+            {
+              "name": "Pollo Verde (slow roasted chicken breast in green salsa w/ root veggies",
+              "description": null,
+              "price": "$ 22.00 lb"
+            },
+            {
+              "name": "Apricot Glazed Corned Beef",
+              "description": null,
+              "price": "$ 36.00 lb"
+            }
+          ]
+        },
+        {
+          "title": "Sides",
+          "items": [
+            {
+              "name": "Kasha Varnishka",
+              "description": null,
+              "price": "$ 14.00 lb"
+            },
+            {
+              "name": "Cranberry and Walnut Compote",
+              "description": null,
+              "price": "$ 14.00 lb"
+            },
+            {
+              "name": "Roasted Carrots w/Hot Honey and butter",
+              "description": null,
+              "price": "$16.00 lb"
+            },
+            {
+              "name": "Homemade Potato or Kasha Knish",
+              "description": null,
+              "price": "$ 8.00 ea"
+            },
+            {
+              "name": "Sweet Potato and Pecan knish",
+              "description": null,
+              "price": "$ 9.00 ea"
+            },
+            {
+              "name": "Mini Potato Latkes",
+              "description": null,
+              "price": "$ 36.00 doz"
+            },
+            {
+              "name": "Apricot Noodle Kugel (2lbs)",
+              "description": null,
+              "price": "$ 32.00 ea"
+            },
+            {
+              "name": "House Made Apple Sauce",
+              "description": null,
+              "price": "$ 14.00 lb"
+            },
+            {
+              "name": "Rice",
+              "description": null,
+              "price": "$ 14.00 lb"
+            }
+          ]
+        }
+      ],
+      "other_text": [
+        "(703) 385-8883",
+        "Please ask about holiday desserts"
+      ]
+    },
+    {
+      "id": "passover-2026",
+      "title": "PASSOVER MENU 2026",
+      "dates": "TO GUARANTEE COMPLETION OF YOUR ORDER, ALL ORDERS MUST BE PLACED BY 3PM WEDNESDAY March 25\nAll orders will be available for pick up starting Wednesday April 1st.",
+      "sections": [
+        {
+          "title": "Appetizers, Hors D’Oeuvers and First Courses",
+          "items": [
+            {
+              "name": "Chopped Liver",
+              "description": null,
+              "price": null
+            },
+            {
+              "name": "Mini Potato Latkes",
+              "description": null,
+              "price": null
+            },
+            {
+              "name": "Mini Sweet Potato and Pecan Latkes",
+              "description": null,
+              "price": null
+            },
+            {
+              "name": "Chicken Soup",
+              "description": null,
+              "price": null
+            },
+            {
+              "name": "Matzo Balls",
+              "description": null,
+              "price": null
+            },
+            {
+              "name": "Gifilte Fish",
+              "description": null,
+              "price": null
+            },
+            {
+              "name": "Charoset",
+              "description": null,
+              "price": null
+            },
+            {
+              "name": "Stuffed Cabbage",
+              "description": null,
+              "price": null
+            }
+          ]
+        },
+        {
+          "title": "Entrees",
+          "items": [
+            {
+              "name": "Slow cooked Beef Brisket with Caramelized Onions & Mushroom Gravy",
+              "description": null,
+              "price": null
+            },
+            {
+              "name": "8oz Dijon and Pistachio crusted Salmon w/citrus glaze",
+              "description": null,
+              "price": null
+            },
+            {
+              "name": "Chicken Breast Al Pastor",
+              "description": null,
+              "price": null
+            },
+            {
+              "name": "Apricot Glazed Roasted 1/2 Chicken",
+              "description": null,
+              "price": null
+            }
+          ]
+        },
+        {
+          "title": "Side Dishes and Accompaniments",
+          "items": [
+            {
+              "name": "Cranberry and Walnut Compote",
+              "description": null,
+              "price": null
+            },
+            {
+              "name": "Potato Kugel",
+              "description": null,
+              "price": null
+            },
+            {
+              "name": "Mexican inspired Quinoa Salad",
+              "description": null,
+              "price": null
+            },
+            {
+              "name": "Lemon scented Broccoli",
+              "description": null,
+              "price": null
+            },
+            {
+              "name": "Homemade Apple Sauce",
+              "description": null,
+              "price": null
+            },
+            {
+              "name": "Hot Honey & Orange Roasted Carrots",
+              "description": null,
+              "price": null
+            }
+          ]
+        }
+      ],
+      "other_text": [
+        "PLEASE CALL WITH ANY QUESTIONS AND ORDERS",
+        "Please ask about our Passover desserts",
+        "12214 Fairfax Towne Center Fairfax, VA 22033 (703) 385 8883"
+      ]
+    }
+  ]
+}

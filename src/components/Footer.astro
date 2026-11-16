@@ -1,0 +1,137 @@
+---
+import { Image } from 'astro:assets';
+import site from '../data/site.json';
+import logo from '../assets/photos/logo-full.png';
+import { hours } from '../lib/hours';
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="wrap grid">
+    <div class="col brand">
+      <Image src={logo} alt="Chutzpah, a REAL New York deli, Restaurant & Caterer" width={240} class="logo" />
+    </div>
+
+    <div class="col">
+      <h2>Find us</h2>
+      <p>
+        {site.address.street}<br />
+        {site.address.city}, {site.address.state}
+        {site.address.zip}
+      </p>
+      <p><a href={site.phoneHref}>{site.phone}</a><br />Fax {site.fax}</p>
+      <p><a href={site.mapsUrl}>Get directions</a></p>
+    </div>
+
+    <div class="col">
+      <h2>Hours</h2>
+      <dl class="hours">
+        {
+          hours.map((h) => (
+            <>
+              <dt>{h.label}</dt>
+              <dd>{h.text}</dd>
+            </>
+          ))
+        }
+      </dl>
+      <p class="note">{site.breakfastNote}</p>
+    </div>
+
+    <div class="col">
+      <h2>More</h2>
+      <ul>
+        <li><a href={site.orderUrl}>Order Online</a></li>
+        <li><a href="/catering/">Catering</a></li>
+        <li><a href="/holidaymenu/">Holiday Menu</a></li>
+        <li><a href={site.jobsUrl}>Join the team</a></li>
+        <li><a href={site.facebook}>Facebook</a></li>
+        <li><a href={site.twitter}>Twitter</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap legal">
+    <p>Copyright {year} {site.copyright} All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--rye);
+    color: #d9d4ca;
+    padding-top: 64px;
+    font-size: 16px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1.2fr 0.8fr;
+    gap: 40px;
+  }
+  .logo {
+    width: 220px;
+    background: var(--tile);
+    padding: 14px 16px;
+    border-radius: var(--radius);
+  }
+  h2 {
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--mustard);
+    margin-bottom: 14px;
+  }
+  p + p {
+    margin-top: 12px;
+  }
+  a {
+    color: #f1ede4;
+  }
+  a:hover {
+    color: #fff;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+  }
+  .hours {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 6px 18px;
+    margin: 0;
+  }
+  .hours dt {
+    font-weight: 600;
+    color: #f1ede4;
+  }
+  .hours dd {
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+  }
+  .note {
+    margin-top: 14px;
+    font-size: 14px;
+    color: #a9a397;
+  }
+  .legal {
+    margin-top: 56px;
+    padding-block: 22px;
+    border-top: 1px solid #36322c;
+    font-size: 13px;
+    color: #8e887c;
+  }
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 520px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

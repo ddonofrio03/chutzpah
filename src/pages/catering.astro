@@ -1,0 +1,210 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import MenuSection from '../components/MenuSection.astro';
+import Newsletter from '../components/Newsletter.astro';
+import site from '../data/site.json';
+import catering from '../data/catering.json';
+import header from '../assets/photos/catering-header.jpg';
+
+const welcome = catering.policies.find((p) => p.title.startsWith('Welcome'))!;
+const policies = catering.policies.filter((p) => p !== welcome);
+const occasions = [
+  ['/restaurants-that-cater-in-northern-virginia/', 'Northern Virginia catering'],
+  ['/fairfax-county-catering/', 'Fairfax County catering'],
+  ['/breakfast-catering-in-fairfax-va/', 'Breakfast and brunch catering'],
+  ['/corn-beef-catering-fairfax-va/', 'Corned beef catering'],
+  ['/doctors-office-catering/', 'Doctors office catering'],
+  ['/shiva-caterers/', 'Shiva catering and platters'],
+  ['/passover-catering/', 'Passover catering'],
+  ['/brit-shalom-catering/', 'Brit shalom catering'],
+];
+---
+
+<Base
+  title="Catering | Chutzpah Deli, Fairfax VA"
+  description="Deli platters, smoked fish, hot buffet entrees and breakfast catering from Chutzpah Deli in Fairfax VA. Delivery 7 days a week. Call Eric at (703) 385-8883."
+>
+  <section class="page-head cat-head">
+    <div class="wrap head-grid">
+      <div>
+        <span class="kicker">Delivery 7 Days a Week</span>
+        <h1>Catering</h1>
+        <p>Please contact the store at {site.phone} and ask for Eric to place your order, or with any catering questions.</p>
+        <div class="btn-row btns">
+          <a class="btn btn-red" href={site.phoneHref}>Call Eric</a>
+          <a class="btn btn-light" href="/files/Catering-Menu-05.14.26.pdf">Download PDF of Catering Menu</a>
+        </div>
+      </div>
+      <Image src={header} alt="A little Chutzpah goes a long way: a spread of overstuffed sandwiches and burgers" widths={[600, 1000]} sizes="(max-width: 860px) 100vw, 520px" loading="eager" />
+    </div>
+  </section>
+
+  <section class="wrap welcome">
+    <div class="letter">
+      <h2 class="display">{welcome.title}</h2>
+      <p>{welcome.text}</p>
+      <p class="sig">{welcome.footnotes?.[0]}</p>
+    </div>
+    <dl class="policies">
+      {
+        policies.map((p) => (
+          <div>
+            <dt>{p.title}</dt>
+            <dd>
+              {p.text}
+              {p.items.map((i) => (
+                <span class="extra">
+                  {i.name}: {i.price}
+                </span>
+              ))}
+            </dd>
+          </div>
+        ))
+      }
+    </dl>
+  </section>
+
+  <div class="wrap menu">
+    <div class="cols">
+      {catering.sections.map((s) => <MenuSection section={s} />)}
+    </div>
+    <p class="dessert-note">No Buffet Is Complete Without One Of Our Fabulous Desserts. Ask About Our Selection.</p>
+  </div>
+
+  <section class="occasions">
+    <div class="wrap">
+      <h2 class="section-title">Catering by Occasion</h2>
+      <p class="lede">Looking for something specific? Each of these pages covers one kind of catering:</p>
+      <ul>
+        {
+          occasions.map(([href, label]) => (
+            <li>
+              <a href={href}>{label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <Newsletter groups />
+</Base>
+
+<style>
+  .head-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(28px, 5vw, 64px);
+    align-items: center;
+  }
+  .head-grid img {
+    width: 100%;
+    aspect-ratio: 12 / 7;
+    object-fit: cover;
+  }
+  .btns {
+    margin-top: 26px;
+  }
+  .welcome {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: clamp(28px, 5vw, 72px);
+    padding-block: clamp(48px, 6vw, 80px);
+  }
+  .letter h2 {
+    font-size: clamp(24px, 2.8vw, 34px);
+    margin-bottom: 18px;
+  }
+  .letter p {
+    font-size: 19px;
+    line-height: 1.65;
+    max-width: 60ch;
+  }
+  .sig {
+    margin-top: 18px;
+    font-family: var(--display);
+    font-size: 26px !important;
+    color: var(--pastrami);
+  }
+  .policies {
+    margin: 0;
+    background: #fff;
+    border: 1px solid var(--grout);
+    border-top: 4px solid var(--rye);
+    padding: 8px 26px;
+  }
+  .policies div {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--grout);
+  }
+  .policies div:last-child {
+    border-bottom: 0;
+  }
+  .policies dt {
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+  .policies dd {
+    margin: 0;
+    color: var(--rye-2);
+    font-size: 16px;
+  }
+  .extra {
+    display: block;
+    margin-top: 4px;
+    color: var(--muted);
+  }
+  .menu {
+    padding-bottom: 40px;
+  }
+  .cols {
+    columns: 2 420px;
+    column-gap: clamp(32px, 5vw, 64px);
+  }
+  .cols > :global(*) {
+    margin-bottom: 40px;
+  }
+  .dessert-note {
+    font-weight: 700;
+    color: var(--pastrami);
+  }
+  .occasions {
+    background: var(--pickle);
+    color: #eef1ea;
+    padding-block: clamp(48px, 6vw, 80px);
+  }
+  .occasions .lede {
+    margin-top: 12px;
+    color: #eef1ea;
+  }
+  .occasions ul {
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 10px;
+  }
+  .occasions a {
+    display: flex;
+    align-items: center;
+    min-height: 52px;
+    padding: 0 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--radius);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .occasions a:hover {
+    background: var(--pickle-2);
+    border-color: #fff;
+  }
+  @media (max-width: 860px) {
+    .head-grid,
+    .welcome {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

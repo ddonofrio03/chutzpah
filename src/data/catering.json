@@ -1,0 +1,543 @@
+{
+  "policies": [
+    {
+      "title": "Welcome to Chutzpah Catering",
+      "text": "In a world of frozen foods, artificial ingredients, and mass produced meals, we have taken the old fashioned approach.  Everything is prepared using only the freshest ingredients, choicest poultry, meats and cheeses.  We believe in overstuffed sandwiches, generous portions and overflowing plates.  This catering menu is designed to reflect that, while offering a wide variety of tastes and presentations.  If you cannot find exactly what you desire, please do not hesitate to call us.  We will make every effort to assure your complete satisfaction.",
+      "items": [],
+      "footnotes": [
+        "Eric"
+      ]
+    },
+    {
+      "title": "Ordering",
+      "text": "Deadline for placing orders is 3 PM the day prior to delivery. We do understand that last minute orders do occur, and we will do our best to complete the order whenever possible.  Certain menu items require 48 hours notice. Please keep in mind that we request a minimum of 10 guests per selection.",
+      "items": [],
+      "footnotes": []
+    },
+    {
+      "title": "Cancellations",
+      "text": "Please contact us by 3 PM the day prior to the scheduled delivery to avoid a cancellation fee of 25%.",
+      "items": [],
+      "footnotes": []
+    },
+    {
+      "title": "Delivery",
+      "text": "Delivery fee determined by location.",
+      "items": [],
+      "footnotes": []
+    },
+    {
+      "title": "Payment",
+      "text": "We accept cash, personal checks, corporate checks, most major credit cards, and corporate accounts.",
+      "items": [
+        {
+          "name": "Additional paper goods",
+          "description": null,
+          "price": "$1.50 p.p"
+        }
+      ],
+      "footnotes": []
+    }
+  ],
+  "sections": [
+    {
+      "title": "Good Morning",
+      "items": [
+        {
+          "name": "Bagel and Bialy Platter",
+          "description": "Our Bagels & Bialys direct form NYC, served with plain and flavored cream cheese, whipped butter and assorted jellies",
+          "price": "$6.75p.p."
+        },
+        {
+          "name": "Large Flakey Croissants",
+          "description": "Baked in-house. Served with whipped butter and preserves",
+          "price": "$5.75p.p."
+        },
+        {
+          "name": "Cinnamon Rolls",
+          "description": "Warm from our oven",
+          "price": "$6.75p.p."
+        },
+        {
+          "name": "Mini Pastry Platter",
+          "description": "A variety of mini Danish and mini buttery croissants with assorted preserves and whipped butter",
+          "price": "$7.00p.p."
+        },
+        {
+          "name": "Oversized Muffins",
+          "description": "A variety of freshly baked muffins served with whipped butter and assorted jellies",
+          "price": "$6.00p.p."
+        },
+        {
+          "name": "Combo Breakfast Platter",
+          "description": "Choose any two of the platters above",
+          "price": "$9.00p.p."
+        },
+        {
+          "name": "Frittata",
+          "description": "Ham and cheese Frittata or Sautéed mushroom, onion and cheese Frittata, served with homefries and mini croissants",
+          "price": "$19.00p.p."
+        },
+        {
+          "name": "Our famous Lox, Eggs & Onions",
+          "description": "Served with homefries, Bagels and Bialys cream cheese and whipped butter",
+          "price": "$23.00p.p."
+        },
+        {
+          "name": "Hot Breakfast Combo",
+          "description": "Fluffy scrambled eggs, buttermilk pancakes, crispy bacon and home fries",
+          "price": "$21.00p.p.",
+          "options": [
+            {
+              "label": "Add fresh baked bagels with butter and jelly",
+              "price": "$3.00p.p."
+            }
+          ]
+        },
+        {
+          "name": "Cinnamon Buns French Toast",
+          "description": null,
+          "price": "$16.00p.p."
+        },
+        {
+          "name": "Golden Cheese Blintzes",
+          "description": null,
+          "price": "$5.00 each/ min 20"
+        }
+      ]
+    },
+    {
+      "title": "Additional Breakfast Items",
+      "items": [
+        {
+          "name": "Fresh Seasonal Fruit Salad",
+          "description": null,
+          "price": "$6.00p.p."
+        },
+        {
+          "name": "Assorted Juices",
+          "description": "Apple, Cranberry and Orange",
+          "price": "$4.00p.p."
+        },
+        {
+          "name": "Fresh Brewed Coffee (serves 10)",
+          "description": null,
+          "price": "$35.00"
+        },
+        {
+          "name": "Bottled Spring Water",
+          "description": null,
+          "price": "$2.00p.p."
+        }
+      ]
+    },
+    {
+      "title": "Smoked Fish Platters",
+      "note": "All smoked fish platters come with bagels and bialys (1½ p.p.) cream cheese, vegetable cream cheese, tomatoes and onions.",
+      "items": [
+        {
+          "name": "You choose:",
+          "description": "Nova, Belly lox, Herring in cream or wine sauce, Whitefish, Whitefish salad, or Kippered salmon",
+          "price": null,
+          "options": [
+            {
+              "label": "1 item",
+              "price": "$21.00 p.p."
+            },
+            {
+              "label": "2 items",
+              "price": "$23.00 p.p."
+            },
+            {
+              "label": "3 items",
+              "price": "$25.00p.p."
+            },
+            {
+              "label": "4 items",
+              "price": "$27.00 p.p."
+            }
+          ]
+        },
+        {
+          "name": "The Chutzpah Smoked Fish Platter",
+          "description": "A jumbo Smoked Whitefish stuffed with Whitefish salad. The tray includes Kippered Salmon, Nova and Belly lox, Herring in cream & wine sauce, plain and veggie cream cheese, tomatoes, onions, cucumbers, olives and capers, imported Swiss cheese and Muenster cheese, bagels & bialys",
+          "price": "$30.00p.p."
+        }
+      ]
+    },
+    {
+      "title": "Ready to Serve Deli Platters",
+      "note": "*All platters served with pickles, your choice of any two deli salads (potato salad, cole slaw, macaroni salad) and mustard and mayo*",
+      "items": [
+        {
+          "name": "Jumbo Sandwich Platter",
+          "description": "An overstuffed sampling of our choice cut deli meats and cheeses on an assortment of fresh breads, cut in half, attractively displayed",
+          "price": "$23.00p.p."
+        },
+        {
+          "name": "Mini Sandwich Platter",
+          "description": "An assortment of our choice cut deli meats and cheeses on fresh baked mini rolls (3 per person)",
+          "price": "$23.00p.p."
+        },
+        {
+          "name": "Deli Mavin",
+          "description": "Deli mavin sandwich platter served with choice of corned beef, pastrami, brisket, roasted turkey and hebrew National salami on an assortment of fresh breads, cut in half, attractively displayed",
+          "price": "$24.00p.p."
+        },
+        {
+          "name": "Deluxe Combo Platter",
+          "description": "Choose any three deli meats, and any two cheeses, beautifully presented, served with your choice of fresh bread and rolls.",
+          "price": "$21.00p.p."
+        },
+        {
+          "name": "Assorted Deli Platter",
+          "description": "Choose from a variety of our choice cut meats, attractively displayed, served with your choice of fresh bread and rolls",
+          "price": "$23.00p.p."
+        },
+        {
+          "name": "Add a Cheese Platter",
+          "description": "An array of sliced cheeses nicely presented, simply designed to accompany the assorted deli platter.",
+          "price": "$3.00p.p."
+        }
+      ]
+    },
+    {
+      "title": "More Delicious Deli Stuff",
+      "items": [
+        {
+          "name": "Complete Lunch #3",
+          "description": "An assortment of our deli sandwiches on fresh baked rolls served with individual bags of chips, pickles and a fresh baked cookie platter",
+          "price": "$21.00p.p."
+        },
+        {
+          "name": "The Gourmet Salad Platter",
+          "description": "A beautifully garnished platter that can include our homemade Albacore Tuna, Gourmet Chicken, Jumbo Shrimp, Creamy Egg or Smoked Whitefish salads. Its served with sliced tomatoes and onions, imported Swiss and Muenster cheeses, an assortment of fresh baked rolls, and potato chips",
+          "price": "$21.00p.p."
+        },
+        {
+          "name": "Box Lunches",
+          "description": "An upscale version of the old classic. An assortment of sandwiches on fresh baked rolls (Shrimp Salad and Tongue extra); add a side of cole slaw, a kosher pickle, a bag of chips, a homemade cookie and a piece of fresh fruit",
+          "price": "$22.00p.p."
+        },
+        {
+          "name": "Chef Salad Platter",
+          "description": "An abundance of Fresh Roasted Turkey, Ham, Cheddar & Imported Swiss Cheeses with sliced eggs, served over fresh greens. Served with fresh baked rolls and butter",
+          "price": "$200.00",
+          "tags": [
+            "Serves 10-12 people"
+          ]
+        },
+        {
+          "name": "Caesar Salad Platter",
+          "description": "Crisp Romaine Lettuce, Parmesan Cheese, Homemade croutons and our Caesar dressing.",
+          "price": null,
+          "options": [
+            {
+              "label": "Side salad",
+              "price": "$90.00"
+            },
+            {
+              "label": "Entrée",
+              "price": "$140.00"
+            }
+          ],
+          "tags": [
+            "Serves 10-12 people"
+          ]
+        },
+        {
+          "name": "Garden Salad Platter",
+          "description": "Fresh greens, cucumbers, tomatoes, red pepper, shredded cheddar cheese & croutons, Choice of three dressings.",
+          "price": null,
+          "options": [
+            {
+              "label": "Side salad",
+              "price": "$90.00"
+            },
+            {
+              "label": "Entrée",
+              "price": "$140.00"
+            }
+          ],
+          "tags": [
+            "Serves 10-12 people"
+          ]
+        },
+        {
+          "name": "Add marinated grilled chicken to either entrée salad",
+          "description": null,
+          "price": "$200.00"
+        },
+        {
+          "name": "Add grilled shrimp or salmon to either entrée salad",
+          "description": null,
+          "price": "$210.00"
+        }
+      ],
+      "footnotes": [
+        "*Entrée salad served with fresh rolls and butter*"
+      ]
+    },
+    {
+      "title": "Appetizers & Hors D’oeuvres",
+      "items": [
+        {
+          "name": "Cheese & Berries Platter",
+          "description": null,
+          "price": "$12.00p.p."
+        },
+        {
+          "name": "Jumbo Shrimp Cocktail",
+          "description": null,
+          "price": "$14.00p.p."
+        },
+        {
+          "name": "Buffalo Tenders",
+          "description": "w/ bleu cheese dressing",
+          "price": "$14.00p.p."
+        },
+        {
+          "name": "Teriyaki Tenders",
+          "description": "w/ wasabi ginger mayo",
+          "price": "$14.00p.p."
+        },
+        {
+          "name": "Crudite w/ Spinach Dip",
+          "description": null,
+          "price": "$13.00p.p."
+        },
+        {
+          "name": "Mini Meatballs Marinara",
+          "description": null,
+          "price": "$13.00p.p."
+        },
+        {
+          "name": "Deviled Eggs",
+          "description": null,
+          "price": "$9.00p.p."
+        },
+        {
+          "name": "Hummus with pita chips",
+          "description": null,
+          "price": "$10.00p.p."
+        },
+        {
+          "name": "Fried Kreplach with Caramelized Onions",
+          "description": null,
+          "price": "$12.00p.p."
+        },
+        {
+          "name": "Mini latkes with Sour Cream and Apple Sauce",
+          "description": null,
+          "price": "$36.00 a dozen (min. 2 dozen)"
+        },
+        {
+          "name": "Hand rolled Pigs in a Blanket made with Kosher Hot Dogs",
+          "description": null,
+          "price": "$36.00 a dozen (min. 2 dozen)"
+        }
+      ]
+    },
+    {
+      "title": "Hot Buffet Entrees",
+      "note": "All Entrees include House Salad with Dressing, Potato or Rice (except for pasta dishes), Vegetable and Fresh Baked Rolls with Butter.",
+      "items": [
+        {
+          "name": "Grilled Salmon with citrus honey glaze",
+          "description": null,
+          "price": "$33.00"
+        },
+        {
+          "name": "Chicken Parmesan with pasta",
+          "description": null,
+          "price": "$33.00"
+        },
+        {
+          "name": "Veal Parmesan with pasta",
+          "description": null,
+          "price": "$34.00"
+        },
+        {
+          "name": "Shrimp Parmesan with pasta",
+          "description": null,
+          "price": "$35.00"
+        },
+        {
+          "name": "Eggplant Parmesan with pasta",
+          "description": null,
+          "price": "$33.00"
+        },
+        {
+          "name": "Apricot Glazed Corned Beef",
+          "description": null,
+          "price": "$31.00"
+        },
+        {
+          "name": "Beef Brisket with Mushroom Gravy",
+          "description": null,
+          "price": "$31.00"
+        },
+        {
+          "name": "Israeli Za Atar Half Chicken",
+          "description": null,
+          "price": "$29.00"
+        },
+        {
+          "name": "Meatloaf with Brown Gravy",
+          "description": null,
+          "price": "$31.00"
+        },
+        {
+          "name": "Roasted Turkey with Cranberry Compote and dressing",
+          "description": null,
+          "price": "$30.00"
+        },
+        {
+          "name": "Honey Bourboun Barbeque Salmon",
+          "description": null,
+          "price": "$30.00"
+        },
+        {
+          "name": "Chicken Marsala",
+          "description": null,
+          "price": "$33.00"
+        },
+        {
+          "name": "BBQ 1/2 Chicken",
+          "description": null,
+          "price": "$29.00"
+        },
+        {
+          "name": "Slow Smoked BBQ Brisket",
+          "description": null,
+          "price": "$31.00"
+        },
+        {
+          "name": "Chicken Cordon Bleu",
+          "description": null,
+          "price": "$33.00"
+        },
+        {
+          "name": "Lasagna (Meat or Veggie)",
+          "description": null,
+          "price": "$27.00"
+        },
+        {
+          "name": "Pasta Primavera",
+          "description": null,
+          "price": "$26.00"
+        },
+        {
+          "name": "Pasta Calabrese (Sundried Tomato Cream Sauce)",
+          "description": null,
+          "price": "$26.00"
+        },
+        {
+          "name": "Add grilled Chicken",
+          "description": null,
+          "price": "$5 p.p."
+        },
+        {
+          "name": "Add grilled Salmon",
+          "description": null,
+          "price": "$7 p.p."
+        },
+        {
+          "name": "Corned Beef & Cabbage",
+          "description": null,
+          "price": "$29.00"
+        }
+      ],
+      "footnotes": [
+        "A $7.00 fee will be applied for each set of chaffin rack, water pan and 2 sternos"
+      ]
+    },
+    {
+      "title": "Beverages",
+      "items": [
+        {
+          "name": "Assorted Can Sodas",
+          "description": null,
+          "price": "$3.00"
+        },
+        {
+          "name": "Spring Water",
+          "description": null,
+          "price": "$2.00"
+        },
+        {
+          "name": "2 liter Coke Products",
+          "description": null,
+          "price": "$7.00"
+        },
+        {
+          "name": "Dr. Browns Soda",
+          "description": null,
+          "price": "$4.50"
+        }
+      ]
+    },
+    {
+      "title": "Desserts",
+      "items": [
+        {
+          "name": "Cheesecake with Fresh Fruit Topping,",
+          "description": "Beautifully decorated.\nA delicious finish and a REAL taste of New York",
+          "price": "$12.00 per person"
+        },
+        {
+          "name": "Traditional Deli Dessert",
+          "description": "An assortment of mini black & white cookies\nchocolate covered grahams and jelly grahams\nchocolate covered jellys, marshmellows and jelly fruit slices",
+          "price": "$11.00 per person"
+        },
+        {
+          "name": "Have Our Cake, and Eat It Too",
+          "description": "A variety of beautifully displayed cakes, strudels and other delicacies",
+          "price": "$11.00 per person"
+        },
+        {
+          "name": "Fresh Baked Cookies & Brownie Platter",
+          "description": "An assortment of fresh baked cookies and rich fudge brownies",
+          "price": "$7.00 per person"
+        },
+        {
+          "name": "Pound Cake and fresh Berries",
+          "description": "An assortment of sliced pound cake with seasonal berries and Whipped Cream",
+          "price": "$11.00 per person"
+        },
+        {
+          "name": "Petite Treats",
+          "description": "A variety of delicious petit fours and rugalach",
+          "price": "$12.00 per person"
+        },
+        {
+          "name": "Mini Black & Whites & Rugalach",
+          "description": null,
+          "price": "$12.00 per person"
+        },
+        {
+          "name": "Fresh Seasonal Fruit Platter",
+          "description": null,
+          "price": "$8.50 per person"
+        }
+      ],
+      "footnotes": [
+        "Add fresh ground coffee or tea for $35.00 per box(serves 10)"
+      ]
+    }
+  ],
+  "other_text": [
+    "No Buffet Is Complete Without One Of Our Fabulous Desserts - Ask About Our Selection",
+    "06/26",
+    "Chutzpah",
+    "a REAL New York deli",
+    "Restaurant & Caterer",
+    "Est. 2001",
+    "Catering Menu",
+    "Delivery 7 Days a Week",
+    "12214 Fairfax Towne Center",
+    "Fairfax, VA 22033",
+    "(703) 385 8883",
+    "www.chutzpahdeli.com"
+  ]
+}

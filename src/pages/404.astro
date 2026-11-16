@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+---
+
+<Base title="Page Not Found | Chutzpah Deli">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="kicker">404</span>
+      <h1>That page isn't on the menu</h1>
+      <p>The link may be old. Everything we serve is still here.</p>
+      <div class="btn-row" style="margin-top: 28px">
+        <a class="btn btn-red" href="/our-menu/">See Our Menu</a>
+        <a class="btn btn-light" href="/">Home</a>
+        <a class="btn btn-light" href={site.phoneHref}>Call {site.phone}</a>
+      </div>
+    </div>
+  </section>
+</Base>

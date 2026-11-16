@@ -1,0 +1,612 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Letterboard from '../components/Letterboard.astro';
+import Newsletter from '../components/Newsletter.astro';
+import site from '../data/site.json';
+import menu from '../data/menu.json';
+import gallery from '../data/gallery.json';
+import { hours } from '../lib/hours';
+
+import hero from '../assets/photos/reuben-hero.jpg';
+import diningRoom from '../assets/photos/dining-room.jpg';
+import dinner from '../assets/photos/dinner-is-back.jpg';
+import platter from '../assets/photos/catering-platter-1.jpg';
+import platter2 from '../assets/photos/catering-platter-2.jpg';
+
+const galleryImages = import.meta.glob<{ default: ImageMetadata }>('../assets/gallery/*.jpg', { eager: true });
+const sampleNames = [
+  'pastrami-skyscaper.jpg',
+  'latkes.jpg',
+  'crabcakes-benedict.jpg',
+  'matzo-ball-soup.jpg',
+  'bagels-and-lox.jpg',
+  'reuben-egg-roll-with-pastrami-fried-rice.jpg',
+  'black-and-white-cookie.jpg',
+  'stuffed-cabbage.jpg',
+];
+const sample = sampleNames.map((f) => {
+  const g = gallery.find((x) => x.file === f)!;
+  return { ...g, img: galleryImages[`../assets/gallery/${f}`].default };
+});
+---
+
+<Base title="REAL New York Deli in Fairfax VA | Breakfast & Catering | Chutzpah Deli">
+  <!-- Hero: the deli wall, the sign, the sandwich -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="kicker">{site.subtag} · Fairfax Towne Center · Since {site.since}</span>
+        <h1 class="display">
+          <span class="a">a</span> REAL<br />New York<br />deli
+        </h1>
+        <p class="lede">{site.intro}</p>
+        <div class="btn-row">
+          <a class="btn btn-red" href={site.orderUrl}>Order Online</a>
+          <a class="btn btn-line" href="/our-menu/">See Our Menu</a>
+          <a class="btn btn-line" href={site.phoneHref}>Call {site.phone}</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <Image
+          src={hero}
+          alt="The 40 oz. Reuben, piled high with corned beef and sauerkraut, with a plate of fries"
+          widths={[560, 840, 1120, 1500]}
+          sizes="(max-width: 860px) 100vw, 560px"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <figcaption>
+          <strong>{menu.cover.line1}</strong>
+          <span>{menu.cover.line2}</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <ul class="facts" aria-label="What we're about">
+    <li>Breakfast &amp; So Much More</li>
+    <li>Quality Ingredients</li>
+    <li>Good Food Any Time</li>
+    <li>Bagels Direct from NYC</li>
+  </ul>
+
+  <!-- Today: special, hours, news -->
+  <section class="section today">
+    <div class="wrap today-grid">
+      {
+        site.special.show && (
+          <div class="special">
+            <Letterboard
+              label={site.special.label}
+              title={site.special.title}
+              description={site.special.description}
+              price={site.special.price}
+            />
+          </div>
+        )
+      }
+
+      <div class="hours-card">
+        <span class="kicker">Hours</span>
+        <dl>
+          {
+            hours.map((h) => (
+              <div>
+                <dt>{h.label}</dt>
+                <dd>{h.text}</dd>
+              </div>
+            ))
+          }
+        </dl>
+        <p class="bfast"><a href="/our-menu/#breakfast">Breakfast</a> served until 11 a.m. weekdays, noon weekends</p>
+        <a class="btn btn-red" href={site.orderUrl}>Click here to order Chutzpah Deli online</a>
+      </div>
+
+      {
+        site.announcement.show && (
+          <article class="news">
+            <Image src={dinner} alt="Dinner is back at Chutzpah Deli, Monday to Saturday until 8pm" widths={[400, 700]} sizes="(max-width: 860px) 100vw, 360px" />
+            <div class="news-body">
+              <h2 class="display">{site.announcement.title}</h2>
+              <p>{site.announcement.body}</p>
+            </div>
+          </article>
+        )
+      }
+    </div>
+  </section>
+
+  <!-- Why Chutzpah -->
+  <section class="unique">
+    <div class="wrap unique-grid">
+      <Image src={diningRoom} alt="Inside Chutzpah Deli: the counter, deli cases and New York murals" widths={[600, 1000]} sizes="(max-width: 860px) 100vw, 50vw" />
+      <blockquote>
+        <p>What makes Chutzpah unique, from all other deli's in the area is when you enter Chutzpah…</p>
+        <p class="punch">…you actually believe you're in a real New York deli.</p>
+        <a href="/about-us/">Read our story</a>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section class="section video">
+    <div class="wrap video-grid">
+      <div>
+        <h2 class="section-title">{site.video.title}</h2>
+      </div>
+      <div class="yt" data-id={site.video.youtubeId}>
+        <a href={`https://youtu.be/${site.video.youtubeId}`} class="yt-link">
+          <img
+            src={`https://i.ytimg.com/vi/${site.video.youtubeId}/hqdefault.jpg`}
+            alt=""
+            width="480"
+            height="360"
+            loading="lazy"
+          />
+          <span class="play"><span class="visually-hidden">Play video: {site.video.title}</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Food porn sample -->
+  <section class="section sample">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <span class="kicker">Food Porn</span>
+          <h2 class="section-title">A Small Sample</h2>
+        </div>
+        <a href="/our-gallery/" class="more">See the whole gallery</a>
+      </div>
+      <ul class="sample-grid">
+        {
+          sample.map((s) => (
+            <li>
+              <figure>
+                <Image src={s.img} alt={s.caption} widths={[320, 560]} sizes="(max-width: 640px) 50vw, 300px" />
+                <figcaption>{s.caption}</figcaption>
+              </figure>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- Catering -->
+  <section class="catering-band">
+    <div class="wrap cat-grid">
+      <div class="cat-copy">
+        <h2 class="section-title">Chutzpah Catering</h2>
+        <p class="lede">
+          In a world of frozen foods, artificial ingredients, and mass produced meals, we have taken the old fashioned approach. We
+          believe in overstuffed sandwiches, generous portions and overflowing plates.
+        </p>
+        <p>Please contact the store at {site.phone} and ask for Eric to place your order, or with any catering questions.</p>
+        <div class="btn-row">
+          <a class="btn btn-mustard" href="/catering/">See the Catering Menu</a>
+          <a class="btn btn-light" href={site.phoneHref}>Call Eric</a>
+        </div>
+      </div>
+      <div class="cat-photos">
+        <Image src={platter} alt="Smoked salmon platter with tomatoes, onions and cream cheese" widths={[400, 600]} sizes="(max-width: 860px) 50vw, 280px" />
+        <Image src={platter2} alt="Whitefish salad platter with cucumbers and lemons" widths={[400, 600]} sizes="(max-width: 860px) 50vw, 280px" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Jobs -->
+  <section class="section jobs">
+    <div class="wrap jobs-inner">
+      <div>
+        <h2 class="section-title">Join Chutzpah, a REAL NY Deli!</h2>
+      </div>
+      <p>
+        Family-owned and operated, this REAL NY Deli remains Washington DC's hidden gem attracting foodies, visitors, and committed
+        customers since 2001. We're a slice of New York right by the Nation's Capital, and we want YOU to join the team!
+      </p>
+      <a class="btn btn-red" href={site.jobsUrl}>Apply Now</a>
+    </div>
+  </section>
+
+  <Newsletter />
+</Base>
+
+<script>
+  // Swap the video thumbnail for the player only when someone clicks it.
+  document.querySelectorAll<HTMLElement>('.yt').forEach((box) => {
+    box.querySelector('a')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      const f = document.createElement('iframe');
+      f.src = `https://www.youtube-nocookie.com/embed/${box.dataset.id}?autoplay=1`;
+      f.title = 'How do you REALLY say Chutzpah?';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture';
+      f.allowFullscreen = true;
+      box.replaceChildren(f);
+    });
+  });
+</script>
+
+<style>
+  /* Hero sits on a white subway-tile wall, like every deli in Manhattan */
+  .hero {
+    position: relative;
+    padding: clamp(40px, 6vw, 84px) 0 clamp(48px, 6vw, 80px);
+    background-color: var(--tile);
+    background-image:
+      linear-gradient(90deg, var(--grout) 1px, transparent 1px),
+      linear-gradient(180deg, var(--grout) 1px, transparent 1px);
+    background-size: 96px 32px, 96px 32px;
+    background-position: 0 0, 0 0;
+    border-bottom: 1px solid var(--grout);
+  }
+  .hero::before {
+    /* offset every other row of tiles by half a tile */
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(90deg, var(--grout) 1px, transparent 1px);
+    background-size: 96px 64px;
+    background-position: 48px 32px;
+    -webkit-mask: repeating-linear-gradient(180deg, transparent 0 32px, #000 32px 64px);
+    mask: repeating-linear-gradient(180deg, transparent 0 32px, #000 32px 64px);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(245, 246, 243, 0.92) 0%, rgba(245, 246, 243, 0.65) 55%, rgba(245, 246, 243, 0.2) 100%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: clamp(28px, 5vw, 64px);
+    align-items: center;
+  }
+  .hero-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  .hero h1 {
+    font-size: clamp(56px, 9.2vw, 124px);
+    line-height: 0.88;
+    color: var(--rye);
+  }
+  .hero h1 .a {
+    color: var(--pastrami);
+  }
+  .hero .lede {
+    max-width: 34ch;
+    font-size: clamp(19px, 1.8vw, 23px);
+  }
+  .hero-photo {
+    margin: 0;
+    background: #fff;
+    padding: 10px 10px 0;
+    box-shadow: var(--shadow);
+    transform: rotate(1.2deg);
+  }
+  .hero-photo img {
+    width: 100%;
+    aspect-ratio: 4 / 3.4;
+    object-fit: cover;
+  }
+  .hero-photo figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 14px 6px 16px;
+    font-size: 15px;
+    color: var(--muted);
+  }
+  .hero-photo figcaption strong {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 19px;
+    color: var(--rye);
+  }
+
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 36px;
+    margin: 0;
+    padding: 18px var(--gutter);
+    list-style: none;
+    background: var(--pastrami);
+    color: #fff;
+    font-family: var(--display);
+    font-size: clamp(14px, 1.5vw, 18px);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .facts li + li::before {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 36px;
+    vertical-align: 3px;
+    background: var(--mustard);
+    transform: rotate(45deg);
+  }
+
+  .today-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.9fr 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+  .hours-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 28px;
+    background: #fff;
+    border: 1px solid var(--grout);
+    border-top: 4px solid var(--rye);
+  }
+  .hours-card dl {
+    margin: 0;
+  }
+  .hours-card dl div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--grout);
+  }
+  .hours-card dt {
+    font-weight: 700;
+  }
+  .hours-card dd {
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+  }
+  .bfast {
+    font-size: 15px;
+    color: var(--muted);
+  }
+  .hours-card .btn {
+    margin-top: 6px;
+    text-align: center;
+    line-height: 1.25;
+    padding-block: 10px;
+  }
+  .news {
+    background: #fff;
+    border: 1px solid var(--grout);
+  }
+  .news img {
+    width: 100%;
+    aspect-ratio: 1024 / 780;
+    object-fit: cover;
+  }
+  .news-body {
+    padding: 20px 24px 24px;
+  }
+  .news h2 {
+    font-size: 24px;
+    color: var(--pastrami);
+  }
+  .news p {
+    margin-top: 8px;
+    color: var(--rye-2);
+  }
+
+  .unique {
+    background: var(--rye);
+    color: var(--tile);
+  }
+  .unique-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: clamp(28px, 5vw, 72px);
+    padding-block: clamp(48px, 6vw, 80px);
+  }
+  .unique img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  blockquote {
+    margin: 0;
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.35;
+    color: #d9d4ca;
+  }
+  blockquote .punch {
+    margin-top: 14px;
+    font-family: var(--display);
+    font-size: clamp(26px, 3.2vw, 40px);
+    line-height: 1.1;
+    color: #fff;
+  }
+  blockquote a {
+    display: inline-block;
+    margin-top: 24px;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--mustard);
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: clamp(24px, 5vw, 64px);
+    align-items: center;
+  }
+  .yt {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: var(--rye);
+    overflow: hidden;
+  }
+  .yt :global(iframe),
+  .yt img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: cover;
+  }
+  .yt-link {
+    display: block;
+    position: absolute;
+    inset: 0;
+  }
+  .play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 84px;
+    height: 84px;
+    margin: -42px 0 0 -42px;
+    border-radius: 50%;
+    background: var(--pastrami);
+    box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.15s;
+  }
+  .play::after {
+    content: '';
+    position: absolute;
+    left: 34px;
+    top: 26px;
+    border-left: 24px solid #fff;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+  }
+  .yt-link:hover .play {
+    transform: scale(1.06);
+  }
+
+  .sample {
+    padding-top: 0;
+  }
+  .head-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px 24px;
+    margin-bottom: 28px;
+  }
+  .more {
+    font-weight: 700;
+  }
+  .sample-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .sample-grid figure {
+    margin: 0;
+  }
+  .sample-grid img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+  .sample-grid figcaption {
+    padding-top: 8px;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .catering-band {
+    background: var(--pickle);
+    color: #eef1ea;
+  }
+  .cat-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: clamp(28px, 5vw, 64px);
+    align-items: center;
+    padding-block: clamp(56px, 7vw, 96px);
+  }
+  .cat-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .cat-copy .kicker {
+    color: var(--mustard);
+  }
+  .cat-copy .lede {
+    color: #eef1ea;
+  }
+  .cat-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .cat-photos img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+  .cat-photos img:last-child {
+    margin-top: 40px;
+  }
+
+  .jobs-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr auto;
+    gap: 24px 40px;
+    align-items: center;
+  }
+  .jobs-inner p {
+    color: var(--rye-2);
+  }
+
+  @media (max-width: 980px) {
+    .today-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .special {
+      grid-column: 1 / -1;
+    }
+    .jobs-inner {
+      grid-template-columns: 1fr;
+      justify-items: start;
+    }
+  }
+  @media (max-width: 860px) {
+    .hero-grid,
+    .unique-grid,
+    .video-grid,
+    .cat-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-photo {
+      transform: none;
+    }
+    .sample-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 640px) {
+    .today-grid {
+      grid-template-columns: 1fr;
+    }
+    .facts li + li::before {
+      display: none;
+    }
+    .facts {
+      gap: 6px 22px;
+    }
+  }
+</style>

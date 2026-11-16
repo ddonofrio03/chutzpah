@@ -1,0 +1,82 @@
+---
+/*
+  The felt letterboard that hangs behind every deli counter.
+  Used for the daily special. Eric changes the words in src/data/site.json.
+*/
+interface Props {
+  label: string;
+  title: string;
+  description?: string;
+  price?: string;
+}
+const { label, title, description, price } = Astro.props;
+---
+
+<figure class="board" aria-label={`${label}: ${title}`}>
+  <div class="felt">
+    <p class="row label">{label}</p>
+    <p class="row title">{title}</p>
+    {description && <p class="row desc">{description}</p>}
+    {price && <p class="row price">{price}</p>}
+  </div>
+</figure>
+
+<style>
+  .board {
+    margin: 0;
+    padding: 14px;
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.12), transparent 30%, transparent 70%, rgba(0, 0, 0, 0.14)),
+      repeating-linear-gradient(92deg, #93613a 0 7px, #85552f 7px 9px, #8f5d36 9px 16px),
+      var(--oak);
+    border-radius: 6px;
+    box-shadow:
+      inset 0 0 0 1px rgba(0, 0, 0, 0.25),
+      0 18px 36px -20px rgba(27, 25, 22, 0.7);
+  }
+  .felt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: clamp(26px, 4vw, 40px) clamp(18px, 3vw, 36px);
+    text-align: center;
+    /* the grooves the plastic letters slide into */
+    background:
+      repeating-linear-gradient(180deg, #181818 0 9px, #0b0b0b 9px 11px),
+      var(--felt);
+    box-shadow: inset 0 4px 14px rgba(0, 0, 0, 0.7);
+  }
+  .row {
+    color: var(--letter);
+    font-family: var(--body);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.9);
+    max-width: 26ch;
+  }
+  .label {
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    color: var(--mustard);
+  }
+  .title {
+    font-size: clamp(24px, 3vw, 34px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+  }
+  .desc {
+    font-size: 15px;
+    line-height: 1.75;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+  }
+  .price {
+    margin-top: 4px;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+</style>

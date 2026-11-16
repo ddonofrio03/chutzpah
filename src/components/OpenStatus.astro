@@ -1,0 +1,92 @@
+---
+/*
+  Shows "Open now until 8 p.m." / "Closed. Opens 7 a.m. Monday".
+  Times are always worked out in New York time, wherever the visitor is.
+  Without JavaScript it falls back to the hours text in the slot.
+*/
+import { hoursJson } from '../lib/hours';
+interface Props {
+  class?: string;
+}
+const { class: cls = '' } = Astro.props;
+---
+
+<span class:list={['open-status', cls]} data-hours={hoursJson}>
+  <span class="dot" aria-hidden="true"></span>
+  <span class="label"><slot /></span>
+</span>
+
+<script>
+  type Slot = { days: number[]; open: string; close: string };
+  const DAY = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const fmt = (t: string) => {
+    const [h, m] = t.split(':').map(Number);
+    const s = h >= 12 ? 'p.m.' : 'a.m.';
+    const hr = h % 12 === 0 ? 12 : h % 12;
+    return m ? `${hr}:${String(m).padStart(2, '0')} ${s}` : `${hr} ${s}`;
+  };
+  const mins = (t: string) => {
+    const [h, m] = t.split(':').map(Number);
+    return h * 60 + m;
+  };
+
+  function nyNow() {
+    const parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/New_York',
+      weekday: 'short',
+      hour: 'numeric',
+      minute: 'numeric',
+      hourCycle: 'h23',
+    }).formatToParts(new Date());
+    const get = (t: string) => parts.find((p) => p.type === t)?.value ?? '0';
+    const day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(get('weekday'));
+    return { day, minutes: Number(get('hour')) * 60 + Number(get('minute')) };
+  }
+
+  function update(el: HTMLElement) {
+    const hours: Slot[] = JSON.parse(el.dataset.hours || '[]');
+    const { day, minutes } = nyNow();
+    const today = hours.find((h) => h.days.includes(day));
+    const label = el.querySelector('.label');
+    if (!label) return;
+    if (today && minutes >= mins(today.open) && minutes < mins(today.close)) {
+      el.dataset.state = 'open';
+      label.textContent = `Open now until ${fmt(today.close)}`;
+      return;
+    }
+    el.dataset.state = 'closed';
+    for (let i = 0; i < 8; i++) {
+      const d = (day + i) % 7;
+      const slot = hours.find((h) => h.days.includes(d));
+      if (!slot) continue;
+      if (i === 0 && minutes >= mins(slot.open)) continue;
+      const when = i === 0 ? 'today' : i === 1 ? 'tomorrow' : DAY[d];
+      label.textContent = `Closed now. Opens ${fmt(slot.open)} ${when}`;
+      return;
+    }
+  }
+
+  document.querySelectorAll<HTMLElement>('.open-status').forEach(update);
+</script>
+
+<style>
+  .open-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #9a958b;
+    flex: none;
+  }
+  .open-status[data-state='open'] .dot {
+    background: #4cc26a;
+    box-shadow: 0 0 0 3px rgba(76, 194, 106, 0.25);
+  }
+  .open-status[data-state='closed'] .dot {
+    background: var(--mustard);
+  }
+</style>

@@ -1,0 +1,100 @@
+---
+import Base from '../layouts/Base.astro';
+import MenuSection from '../components/MenuSection.astro';
+import site from '../data/site.json';
+import holiday from '../data/holiday.json';
+
+// The menu set as "current" in holiday.json shows first.
+const menus = [...holiday.menus].sort((a, b) => (a.id === holiday.current ? -1 : b.id === holiday.current ? 1 : 0));
+const current = menus[0];
+const rest = menus.slice(1);
+---
+
+<Base
+  title="Holiday Menu | Chutzpah Deli, Fairfax VA"
+  description="Chutzpah Deli holiday catering menus: Break Fast, Rosh Hashanah and Passover platters, entrees and sides."
+>
+  <section class="page-head">
+    <div class="wrap">
+      <span class="kicker">Holiday Menu</span>
+      <h1>{current.title}</h1>
+      {current.dates && <p class="dates">{current.dates}</p>}
+      <div class="btn-row btns">
+        <a class="btn btn-red" href={site.phoneHref}>Order: {site.phone}</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap body">
+    <div class="cols">
+      {current.sections.map((s) => <MenuSection section={s} />)}
+    </div>
+    {current.other_text.filter((t) => !t.includes('385')).map((t) => <p class="note">{t}</p>)}
+  </div>
+
+  {
+    rest.map((m) => (
+      <section class="other" id={m.id}>
+        <div class="wrap">
+          <h2 class="section-title">{m.title}</h2>
+          {m.dates && <p class="dates-dark">{m.dates}</p>}
+          <div class="cols">
+            {m.sections.map((s) => (
+              <MenuSection section={s} />
+            ))}
+          </div>
+          {m.other_text
+            .filter((t) => !t.includes('385'))
+            .map((t) => (
+              <p class="note">{t}</p>
+            ))}
+          {m.id.startsWith('passover') && (
+            <a class="btn btn-red" href="/passover-order/">
+              Place a Passover order
+            </a>
+          )}
+        </div>
+      </section>
+    ))
+  }
+</Base>
+
+<style>
+  .dates {
+    white-space: pre-line;
+  }
+  .btns {
+    margin-top: 24px;
+  }
+  .body {
+    padding-block: clamp(48px, 6vw, 80px);
+  }
+  .cols {
+    columns: 2 420px;
+    column-gap: clamp(32px, 5vw, 64px);
+    margin-top: 28px;
+  }
+  .cols > :global(*) {
+    margin-bottom: 40px;
+  }
+  .note {
+    font-weight: 700;
+    color: var(--pastrami);
+  }
+  .other {
+    padding-block: clamp(48px, 6vw, 80px);
+    border-top: 1px solid var(--grout);
+  }
+  .other:nth-of-type(odd) {
+    background: var(--tile-2);
+  }
+  .dates-dark {
+    margin-top: 12px;
+    max-width: 70ch;
+    color: var(--muted);
+    white-space: pre-line;
+  }
+  .other .btn {
+    margin-top: 12px;
+  }
+</style>

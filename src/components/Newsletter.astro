@@ -1,0 +1,111 @@
+---
+// Posts straight to the deli's existing Mailchimp list.
+import site from '../data/site.json';
+interface Props {
+  groups?: boolean;
+}
+const { groups = false } = Astro.props;
+---
+
+<section class="newsletter">
+  <div class="wrap inner">
+    <div class="copy">
+      <span class="kicker">Subscribe</span>
+      <h2 class="section-title">Newsletter</h2>
+      <p>Monthly specials, weekly features and seasonal menus.</p>
+    </div>
+    <form action={site.newsletter.action} method="post" target="_blank" class="form">
+      <label class="field email">
+        Email address
+        <input type="email" name="EMAIL" required autocomplete="email" />
+      </label>
+      <label class="field">
+        First name
+        <input type="text" name="FNAME" autocomplete="given-name" />
+      </label>
+      <label class="field">
+        Last name
+        <input type="text" name="LNAME" autocomplete="family-name" />
+      </label>
+      {
+        groups && (
+          <fieldset class="groups">
+            <legend>Send me</legend>
+            <label><input type="checkbox" name="group[5493][1]" value="1" /> Monthly Specials</label>
+            <label><input type="checkbox" name="group[5493][2]" value="2" /> Weekly Features</label>
+            <label><input type="checkbox" name="group[5493][4]" value="4" /> Seasonal Menus</label>
+          </fieldset>
+        )
+      }
+      <div class="hp" aria-hidden="true">
+        <input type="text" name={site.newsletter.honeypot} tabindex="-1" value="" />
+      </div>
+      <button type="submit" class="btn btn-red">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<style>
+  .newsletter {
+    background: var(--tile-2);
+    border-top: 1px solid var(--grout);
+    padding-block: clamp(48px, 7vw, 80px);
+  }
+  .inner {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 40px;
+    align-items: end;
+  }
+  .copy p {
+    margin-top: 12px;
+    color: var(--muted);
+  }
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    align-items: end;
+  }
+  .email {
+    grid-column: 1 / -1;
+  }
+  .groups {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+  }
+  .groups legend {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .groups label {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    min-height: 32px;
+  }
+  .hp {
+    position: absolute;
+    left: -5000px;
+  }
+  .form .btn {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+  @media (max-width: 820px) {
+    .inner {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 480px) {
+    .form {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

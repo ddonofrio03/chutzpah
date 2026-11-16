@@ -1,0 +1,2643 @@
+{
+  "edition": "June 2026",
+  "advisory": "*May contain raw or under cooked ingredients. Consuming raw or under cooked food may increase your risk of foodborne illness.",
+  "coldSmoked": "** Nova and Belly Lox are cold smoked",
+  "cover": {
+    "line1": "Home of the 40 oz. Reuben Sandwich",
+    "line2": "Let’s Be Honest, Size Does Matter"
+  },
+  "categories": [
+    {
+      "id": "breakfast",
+      "title": "Breakfast",
+      "intro": "Served until 11:00 am Weekdays & 12 Noon Weekends",
+      "sections": [
+        {
+          "title": "Egg Sandwiches",
+          "subtitle": "Served on Bagel, Bialy, Toast, or Challah Roll",
+          "advisory": true,
+          "items": [
+            {
+              "name": "Egg (any style)",
+              "description": null,
+              "price": "$6.50"
+            },
+            {
+              "name": "Egg & Cheese",
+              "description": null,
+              "price": "$7.00"
+            },
+            {
+              "name": "Egg, Bacon or Ham",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Egg with Cheese, Bacon or Ham",
+              "description": null,
+              "price": "$8.50"
+            },
+            {
+              "name": "Scrambled Egg with Nova and Onions",
+              "description": null,
+              "price": "$11.50"
+            },
+            {
+              "name": "Croissant",
+              "description": null,
+              "price": "$1.75 extra"
+            },
+            {
+              "name": "Tomato or Chutzpah Onions",
+              "description": null,
+              "price": "$1.00 extra"
+            },
+            {
+              "name": "Add Egg to sandwich",
+              "description": null,
+              "price": "$2.00"
+            },
+            {
+              "name": "Substitute Egg whites",
+              "description": null,
+              "price": "$.75 each"
+            },
+            {
+              "name": "Add a side of home fries to any egg sandwich",
+              "description": null,
+              "price": "$4.00"
+            }
+          ],
+          "footnotes": [
+            "Choice of cheese:  American, Cheddar, Muenster, Swiss, Mozzarella, Pepper Jack"
+          ]
+        },
+        {
+          "title": "Egg Platters",
+          "subtitle": "Served with home fries, bagel, bialy or toast",
+          "advisory": true,
+          "items": [
+            {
+              "name": "One egg (any style)",
+              "description": null,
+              "price": "$10.50"
+            },
+            {
+              "name": "Two eggs (any style)",
+              "description": null,
+              "price": "$12.50"
+            },
+            {
+              "name": "Three eggs (any style)",
+              "description": null,
+              "price": "$14.50"
+            },
+            {
+              "name": "Substitute Egg Whites",
+              "description": null,
+              "price": "$.75 per egg"
+            }
+          ]
+        },
+        {
+          "title": "Breakfast Combos",
+          "advisory": true,
+          "items": [
+            {
+              "name": "#1 Two eggs (any style)",
+              "description": "Bacon, home fries, bagel, bialy or toast, butter & jelly",
+              "price": "$15.50"
+            },
+            {
+              "name": "#2 Two eggs (any style)",
+              "description": "Grilled maple ham steak, home fries, bagel, bialy or toast, butter & jelly",
+              "price": "$18.50"
+            },
+            {
+              "name": "#3 Three eggs (any style)",
+              "description": "Two pancakes, bacon, home fries, bagel, bialy or toast, butter & jelly",
+              "price": "$21.50"
+            },
+            {
+              "name": "#4 Three eggs (any style)",
+              "description": "Cinnamon Bun French toast, bacon, home fries, bagel, bialy or toast, butter & jelly",
+              "price": "$21.50"
+            },
+            {
+              "name": "#5 Three eggs (any style)",
+              "description": "Grilled maple ham steak, bacon, two pancakes or French toast, home fries, bagel, bialy or toast, butter & jelly",
+              "price": "$24.50"
+            }
+          ]
+        },
+        {
+          "title": "Egg Specialties",
+          "advisory": true,
+          "items": [
+            {
+              "name": "Eggs Benedict Chutzpah Style",
+              "description": "Two poached eggs, grilled maple ham steak served on potato latkes topped with Hollandaise sauce",
+              "price": "$21.50"
+            },
+            {
+              "name": "Smoked Salmon Benedict",
+              "description": "A generous portion of gently sautéed smoked salmon, two poached eggs with Hollandaise sauce atop grilled French Bread with home fries",
+              "price": "$21.50",
+              "options": [
+                {
+                  "label": "(Substitute potato latkes for French Bread and Home fries)",
+                  "price": "$4.00"
+                }
+              ]
+            },
+            {
+              "name": "Corned Beef Hash",
+              "description": "Our homemade corned beef hash with three eggs any style, home fries, bagel, bialy or toast, with butter & jelly",
+              "price": "$20.50"
+            },
+            {
+              "name": "Corned Beef Hash Benedict",
+              "description": "Our homemade corned beef hash served over potato latkes topped with two poached eggs and Hollandaise sauce",
+              "price": "$21.50"
+            },
+            {
+              "name": "Steak and Eggs",
+              "description": "Hand trimmed steak, grilled to order, served with three eggs any style, home fries, bagel, bialy or toast, with butter & jelly",
+              "price": "$23.50"
+            }
+          ]
+        },
+        {
+          "title": "From the Griddle",
+          "items": [
+            {
+              "name": "Buttermilk Pancake (1)",
+              "description": null,
+              "price": "$6.00"
+            },
+            {
+              "name": "Buttermilk Pancakes (2)",
+              "description": null,
+              "price": "$10.00"
+            },
+            {
+              "name": "Buttermilk Pancakes (3)",
+              "description": null,
+              "price": "$13.00"
+            },
+            {
+              "name": "*Add chocolate chips (per pancake)",
+              "description": null,
+              "price": "$1.25"
+            },
+            {
+              "name": "*Add blueberries (per pancake)",
+              "description": null,
+              "price": "$1.25"
+            },
+            {
+              "name": "French Toast",
+              "description": "Batter dipped cinnamon buns, dusted with powdered sugar",
+              "price": null,
+              "options": [
+                {
+                  "label": "Full Order(2)",
+                  "price": "$14.00"
+                },
+                {
+                  "label": "Half Order(1)",
+                  "price": "$8.00"
+                },
+                {
+                  "label": "*Add fruit sauce and whipped cream",
+                  "price": "$1.50"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "SPECIAL",
+          "subtitle": "(Carry Out Only)",
+          "note": "Served until 11:00am Monday - Friday",
+          "items": [
+            {
+              "name": "Bagel & Butter with coffee",
+              "description": null,
+              "price": "$7.50"
+            }
+          ]
+        },
+        {
+          "title": "SPECIAL",
+          "subtitle": "(Carry Out Only)",
+          "note": "Served until 11:00am Monday - Friday",
+          "items": [
+            {
+              "name": "Egg & Cheese on a bagel or toast with coffee",
+              "description": null,
+              "price": "$9.50",
+              "marks": [
+                "*"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "more-breakfast",
+      "title": "More Breakfast",
+      "intro": "Served All Day",
+      "sections": [
+        {
+          "title": "Scrambles",
+          "subtitle": "Made with locally sourced eggs, served with home fries, and choice of bagel, bialy or toast with butter & jelly",
+          "advisory": true,
+          "items": [
+            {
+              "name": "Grilled Salami & Eggs",
+              "description": null,
+              "price": "$21.50"
+            },
+            {
+              "name": "Grilled Bologna & Eggs",
+              "description": null,
+              "price": "$21.50"
+            },
+            {
+              "name": "Grilled Knockwurst & Eggs",
+              "description": null,
+              "price": "$21.50"
+            },
+            {
+              "name": "Grilled Corned Beef & Eggs",
+              "description": null,
+              "price": "$22.50"
+            },
+            {
+              "name": "Grilled Pastrami & Eggs",
+              "description": null,
+              "price": "$22.50"
+            },
+            {
+              "name": "Grilled Tongue & Eggs",
+              "description": null,
+              "price": "$24.50"
+            },
+            {
+              "name": "Eggs & Onions",
+              "description": null,
+              "price": "$15.50"
+            },
+            {
+              "name": "Peppers, Eggs & Chutzpah Onions",
+              "description": null,
+              "price": "$16.50"
+            },
+            {
+              "name": "Lox, Eggs & Chutzpah Onions",
+              "description": null,
+              "price": "$22.50",
+              "marks": [
+                "**"
+              ]
+            },
+            {
+              "name": "Hell’s Kitchen Sink",
+              "description": "4 scrambled eggs, beef sausage, home fries, grilled jalapeños, Chutzpah onions, hot and sweet peppers all mixed together and topped with pepper jack cheese.",
+              "price": "$22.50"
+            },
+            {
+              "name": "The Oops!",
+              "description": "Lox, eggs, Chutzpah Onions & matzo brei\nIt was an accident on our grill that turned into something great!",
+              "price": "$23.50",
+              "marks": [
+                "**"
+              ]
+            },
+            {
+              "name": "Matzo Brei",
+              "description": "*It ain’t just for Passover anymore! Served with maple syrup or jelly (not served w/ bagel , toast or home fries)",
+              "price": "$16.50"
+            }
+          ]
+        },
+        {
+          "title": "Omelettes",
+          "subtitle": "Made with locally sourced eggs, served with home fries, and choice of bagel, bialy or toast with butter & jelly",
+          "advisory": true,
+          "items": [
+            {
+              "name": "Cheese",
+              "description": null,
+              "price": "$16.00"
+            },
+            {
+              "name": "Bacon & Cheese",
+              "description": null,
+              "price": "$18.50"
+            },
+            {
+              "name": "Ham & Cheese",
+              "description": null,
+              "price": "$18.50"
+            },
+            {
+              "name": "Mozzarella & Tomato",
+              "description": null,
+              "price": "$17.00"
+            },
+            {
+              "name": "Mushroom, Chutzpah Onions & Cheese",
+              "description": null,
+              "price": "$18.50"
+            },
+            {
+              "name": "Mushroom, Bacon & Cheese",
+              "description": null,
+              "price": "$19.50"
+            },
+            {
+              "name": "Veggie Supreme",
+              "description": "With red peppers, Chutzpah onions, tomatoes, mushrooms, and your choice of cheese",
+              "price": "$19.50"
+            },
+            {
+              "name": "Veggie Supreme with Ham or Bacon",
+              "description": null,
+              "price": "$22.00"
+            },
+            {
+              "name": "Mixed Deli",
+              "description": "Grilled salami & bologna with melted Swiss",
+              "price": "$21.50"
+            },
+            {
+              "name": "“REAL” Western",
+              "description": "With red peppers, Chutzpah onions, tomatoes, grilled ham and cheddar cheese, topped with chili sauce and sliced jalapeños",
+              "price": "$22.00"
+            },
+            {
+              "name": "The “Eric” Omelette",
+              "description": "Imported Ham, extra American Cheese, Chutzpah Onions and Sweet Peppers",
+              "price": "$22.00"
+            },
+            {
+              "name": "Spinach, Bacon & Swiss Cheese",
+              "description": "Topped with Hollandaise sauce",
+              "price": "$22.00"
+            },
+            {
+              "name": "Corned Beef Hash & Swiss Cheese",
+              "description": "Topped with creamy spicy mustard",
+              "price": "$22.00"
+            }
+          ],
+          "footnotes": [
+            "Substitute a croissant with scrambles and omelettes for $1.75"
+          ]
+        },
+        {
+          "title": "Bagels & Bialys",
+          "subtitle": "(direct from New York City)",
+          "items": [
+            {
+              "name": "with Butter",
+              "description": null,
+              "price": "$5.00"
+            },
+            {
+              "name": "with Plain Cream Cheese",
+              "description": null,
+              "price": "$6.00"
+            },
+            {
+              "name": "with Vegetable, Chive or Flavored Cream Cheese",
+              "description": null,
+              "price": "$6.50"
+            },
+            {
+              "name": "with Lox Supreme Cream Cheese",
+              "description": null,
+              "price": "$9.00",
+              "marks": [
+                "**"
+              ]
+            },
+            {
+              "name": "Nova & Cream Cheese",
+              "description": "w/ sliced tomato and onion",
+              "price": "$17.50",
+              "marks": [
+                "**"
+              ]
+            },
+            {
+              "name": "Belly Lox & Cream Cheese",
+              "description": "w/ sliced tomato and onion",
+              "price": "$18.50"
+            },
+            {
+              "name": "Whitefish Salad",
+              "description": "w/ sliced tomato and onion",
+              "price": "$16.50"
+            },
+            {
+              "name": "Baked Salmon Salad",
+              "description": "w/ sliced tomato and onion",
+              "price": "$17.50"
+            },
+            {
+              "name": "**Extra Tomato or Cucumber",
+              "description": null,
+              "price": "$1.00"
+            }
+          ]
+        },
+        {
+          "title": "Smoked Fish Platters",
+          "note": "All platters served with bagel or bialy, plain & vegetable cream cheese, tomato, onion , olives & cucumbers",
+          "items": [
+            {
+              "name": "Nova",
+              "description": null,
+              "price": "$22.00",
+              "marks": [
+                "**"
+              ]
+            },
+            {
+              "name": "Belly Lox",
+              "description": "(Yes, It’s salty!)",
+              "price": "$23.00",
+              "marks": [
+                "**"
+              ]
+            },
+            {
+              "name": "Whitefish",
+              "description": null,
+              "price": "$22.00"
+            },
+            {
+              "name": "House Made Whitefish Salad",
+              "description": null,
+              "price": "$21.00"
+            },
+            {
+              "name": "House Made Baked Salmon Salad",
+              "description": null,
+              "price": "$22.00"
+            },
+            {
+              "name": "Herring (wine or cream sauce)",
+              "description": null,
+              "price": "$21.00"
+            }
+          ]
+        },
+        {
+          "title": "On The Side",
+          "items": [
+            {
+              "name": "Home fries",
+              "description": null,
+              "price": "$7.00"
+            },
+            {
+              "name": "Bacon - 2 strips",
+              "description": null,
+              "price": "$4.00"
+            },
+            {
+              "name": "Bacon - 4 strips",
+              "description": null,
+              "price": "$7.00"
+            },
+            {
+              "name": "Maple Ham Steak",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Corned Beef Hash",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Grilled Knockwurst",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Sliced Tomato or Chutzpah Onions",
+              "description": null,
+              "price": "$1.00"
+            },
+            {
+              "name": "Hollandaise Sauce",
+              "description": null,
+              "price": "$1.50"
+            },
+            {
+              "name": "Plain Cream Cheese",
+              "description": null,
+              "price": "$3.00"
+            },
+            {
+              "name": "Veggie, Chive, or Flavored Cream Cheese",
+              "description": null,
+              "price": "$3.50"
+            },
+            {
+              "name": "Lox Supreme Cream Cheese",
+              "description": null,
+              "price": "$5.00",
+              "marks": [
+                "**"
+              ]
+            },
+            {
+              "name": "Egg any style",
+              "description": null,
+              "price": "$2.00",
+              "marks": [
+                "*"
+              ]
+            },
+            {
+              "name": "Cheese",
+              "description": null,
+              "price": "$1.50"
+            },
+            {
+              "name": "Toast - Butter & Jelly",
+              "description": null,
+              "price": "$5.00"
+            },
+            {
+              "name": "House Made Whitefish Salad",
+              "description": null,
+              "price": "$14.00"
+            },
+            {
+              "name": "House Made Baked Salmon Salad",
+              "description": null,
+              "price": "$15.00"
+            },
+            {
+              "name": "Nova",
+              "description": null,
+              "price": "$15.00",
+              "marks": [
+                "**"
+              ]
+            },
+            {
+              "name": "Belly Lox",
+              "description": null,
+              "price": "$16.00",
+              "marks": [
+                "**"
+              ]
+            },
+            {
+              "name": "Herring",
+              "description": "With wine or cream sauce",
+              "price": "$14.00"
+            },
+            {
+              "name": "Whitefish",
+              "description": null,
+              "price": "$15.00"
+            },
+            {
+              "name": "Egg whites",
+              "description": null,
+              "price": "$2.00"
+            },
+            {
+              "name": "Croissant",
+              "description": null,
+              "price": "$5.00"
+            },
+            {
+              "name": "Cinnamon Buns",
+              "description": null,
+              "price": "$6.50"
+            }
+          ]
+        },
+        {
+          "title": "Blintzes",
+          "items": [
+            {
+              "name": "Blintzes",
+              "description": "Three golden brown cheese filled crêpes",
+              "price": "$15.00",
+              "options": [
+                {
+                  "label": "*Add fruit sauce",
+                  "price": "$1.25"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "starters",
+      "title": "Soups & Starters",
+      "intro": "Maybe a little something to start with?",
+      "sections": [
+        {
+          "title": "SOUPS",
+          "items": [
+            {
+              "name": "Chicken Noodle made with fresh vegetables and real chicken",
+              "description": null,
+              "price": "$8.50"
+            },
+            {
+              "name": "Chicken Noodle with a Matzo Ball",
+              "description": null,
+              "price": "$9.50"
+            },
+            {
+              "name": "Chicken Noodle with Kreplach",
+              "description": "(It’s like a wonton, It’s like a ravioli... If you still don’t get it, order the Matzo Ball)",
+              "price": "$10.50"
+            },
+            {
+              "name": "Borscht (cold) with sour cream",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Borscht (hot) with boiled potato",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Soup of the day",
+              "description": "(seasonal)",
+              "price": "Varies Daily"
+            }
+          ]
+        },
+        {
+          "title": "APPETIZERS",
+          "items": [
+            {
+              "name": "Stuffed Cabbage",
+              "description": "with sweet & sour sauce",
+              "price": "$8.00"
+            },
+            {
+              "name": "Herring",
+              "description": "In wine or homemade cream sauce served with rye toast",
+              "price": "$15.00"
+            },
+            {
+              "name": "Chopped Liver",
+              "description": "Served with rye bread, sliced tomato, and onion on a bed of lettuce",
+              "price": "$14.00"
+            },
+            {
+              "name": "Knishes Potato or Kasha",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Split Knish Potato or Kasha with melted Swiss",
+              "description": null,
+              "price": "$9.50"
+            },
+            {
+              "name": "Potato Latkes",
+              "description": "Served with house made apple sauce or sour cream",
+              "price": "$9.00"
+            },
+            {
+              "name": "Noodle Kugel",
+              "description": "Traditional side dish with egg noodles, cottage cheese, fruit and raisins",
+              "price": "$8.00"
+            },
+            {
+              "name": "Tossed Salad",
+              "description": "Greens, tomato, cucumber, red pepper, cheddar cheese, and croutons",
+              "price": "$7.50"
+            },
+            {
+              "name": "Caesar Salad",
+              "description": "Romaine lettuce, house Caesar dressing, Parmesan cheese and croutons",
+              "price": "$7.50"
+            },
+            {
+              "name": "Golden Chicken Tenders",
+              "description": "Served with your choice of dipping sauce, Ranch, Honey Mustard, Wasabi Ginger",
+              "price": "$14.00"
+            },
+            {
+              "name": "Buffalo Chicken Tenders",
+              "description": "Served with Bleu Cheese, or Ranch dressing and celery",
+              "price": "$14.00"
+            },
+            {
+              "name": "Teriyaki Chicken Tenders",
+              "description": "Served with Wasabi Ginger dipping sauce",
+              "price": "$14.00"
+            },
+            {
+              "name": "Hot Dog",
+              "description": "Plain or with sauerkraut, onions, relish, or cole slaw",
+              "price": "$7.00"
+            },
+            {
+              "name": "Gary Dog",
+              "description": "A Hot Dog served with mustard & potato salad",
+              "price": "$8.50"
+            },
+            {
+              "name": "The Queen’s Dog",
+              "description": "Hot dog split, stuffed with mandarin oranges, wrapped in pastrami and topped with deli mustard",
+              "price": "$10.50"
+            },
+            {
+              "name": "Grilled Knockwurst",
+              "description": "Plain or with sauerkraut, onions, relish, or cole slaw",
+              "price": "$8.00"
+            },
+            {
+              "name": "Fried Kreplach (4) with Chutzpah Onions",
+              "description": null,
+              "price": "$14.00"
+            },
+            {
+              "name": "Hand-cut Doubled Fried Potatoes",
+              "description": "ask about our dipping sauces",
+              "price": "$13.00"
+            }
+          ]
+        },
+        {
+          "title": "POUTINES",
+          "items": [
+            {
+              "name": "Chutzpah Poutine",
+              "description": "Large plate of Hand Cut Fries layered with sharp Cheddar Cheese and topped with house made gravy",
+              "price": "$18.00"
+            },
+            {
+              "name": "Breakfast Poutine",
+              "description": "Large plate of Home Fries layered with sharp Cheddar Cheese, bacon crumbles, two fried eggs, and topped with Hollandaise Sauce",
+              "price": "$21.00"
+            },
+            {
+              "name": "BBQ Poutine",
+              "description": "Large plate of Hand Cut Fries with house made pulled barbeque chicken, sharp Cheddar Cheese, and House made honey bourbon barbeque sauce, topped with cole slaw",
+              "price": "$22.00"
+            }
+          ]
+        }
+      ],
+      "outro": [
+        "Of Course Pickles and Cole Slaw are free with the purchase of a Sandwich or Entrée"
+      ]
+    },
+    {
+      "id": "salads",
+      "title": "Salads",
+      "sections": [
+        {
+          "title": "SALADS",
+          "items": [
+            {
+              "name": "Chutzpah House Salad",
+              "description": "Fresh Greens, cucumbers, tomatoes, red peppers, shredded cheddar cheese, and house made croutons",
+              "price": null,
+              "options": [
+                {
+                  "label": "",
+                  "price": "$15.00"
+                },
+                {
+                  "label": "Nosh",
+                  "price": "$7.50"
+                }
+              ]
+            },
+            {
+              "name": "Grilled Chicken Salad (Not available during breakfast)",
+              "description": "Add warm strips of grilled marinated chicken breast to our large house salad",
+              "price": "$20.00"
+            },
+            {
+              "name": "Grilled Shrimp Salad",
+              "description": "Add lightly seasoned large grilled shrimp to our house salad",
+              "price": "$22.00"
+            },
+            {
+              "name": "Caesar Salad",
+              "description": "Romaine Lettuce, Parmesan cheese, house Caesar dressing, and house made croutons",
+              "price": null,
+              "options": [
+                {
+                  "label": "",
+                  "price": "$15.00"
+                },
+                {
+                  "label": "Nosh",
+                  "price": "$7.50"
+                }
+              ]
+            },
+            {
+              "name": "Grilled Chicken Caesar Salad (Not available during breakfast)",
+              "description": "Add warm strips of grilled marinated chicken to our Caesar salad",
+              "price": "$20.00"
+            },
+            {
+              "name": "Grilled Shrimp Caesar Salad",
+              "description": "Add lightly seasoned large grilled shrimp to our Caesar salad",
+              "price": "$22.00"
+            },
+            {
+              "name": "Fried Chicken Salad",
+              "description": "Strips of golden chicken tenders served on fresh greens, with hard boiled egg, cucumber, tomato, crumbled bacon, bleu cheese and house made croutons",
+              "price": "$21.00"
+            },
+            {
+              "name": "Spinach Salad",
+              "description": "Baby spinach, crumbled bacon, red onion, mushrooms, and a hard boiled egg, tossed with French dressing",
+              "price": "$18.00"
+            },
+            {
+              "name": "Chef’s Salad",
+              "description": "An abundance of turkey, ham, Swiss, and cheddar cheese, with a hard boiled egg served over our house salad",
+              "price": "$22.00"
+            },
+            {
+              "name": "Steak Salad",
+              "description": "Strips of tender steak, cooked to order, with crumbled bleu cheese and red onion, served atop of our house salad",
+              "price": "$22.00",
+              "marks": [
+                "*"
+              ]
+            },
+            {
+              "name": "Asian Grilled Salmon Salad",
+              "description": "Asian seasoned salmon filet, grilled and served over our large house salad",
+              "price": "$22.00"
+            },
+            {
+              "name": "Teriyaki Grilled Salmon Salad",
+              "description": "Teriyaki glazed grilled salmon filet over house salad with pineapple",
+              "price": "$22.00"
+            },
+            {
+              "name": "Buffalo Chicken Salad",
+              "description": "Strips of golden chicken tenders dipped in spicy Buffalo wing sauce, served on fresh greens with a hard boiled egg, cucumbers, tomatoes, crumbled bleu cheese, celery stalks, and house made croutons",
+              "price": "$21.00"
+            },
+            {
+              "name": "Buffalo Shrimp Salad",
+              "description": "Eight Jumbo Shrimp dipped in spicy Buffalo wing sauce, served on fresh greens with a hard boiled egg, cucumbers, tomatoes, crumbled bleu cheese, celery stalks, and house made croutons",
+              "price": "$22.00"
+            },
+            {
+              "name": "Mott Street Chinese Chicken Salad (Not available during breakfast)",
+              "description": "Fresh greens, our chopped cabbage mix, grilled chicken breast, mandarin oranges, green onions, chow mein noodles & sliced almonds in our sesame dressing",
+              "price": "$22.00"
+            },
+            {
+              "name": "Asian Fried Chicken Salad",
+              "description": "Strips of golden fried chicken tenders in teriyaki glaze over fresh greens, our chopped cabbage mix, mandarin oranges, green onions, pineapple, chow mein noodles & sliced almonds in our sesame dressing",
+              "price": "$22.00"
+            },
+            {
+              "name": "Scoop Salad",
+              "description": "Your choice of chicken salad, tuna salad or egg salad served over our house salad - Substitute shrimp salad for $1.00 per scoop",
+              "price": null,
+              "options": [
+                {
+                  "label": "",
+                  "price": "$20.00"
+                },
+                {
+                  "label": "Nosh",
+                  "price": "$16.00"
+                }
+              ]
+            },
+            {
+              "name": "Two Scoop Salad",
+              "description": "Your choice of two scoops of chicken salad, tuna salad or egg salad served over our house salad - Substitute shrimp salad for $1.00 per scoop",
+              "price": "$23.00"
+            },
+            {
+              "name": "Three Scoop Salad",
+              "description": "Blah, blah, blah & you know about the shrimp",
+              "price": "$25.00"
+            },
+            {
+              "name": "The Man Salad",
+              "description": "A nosh size portion of brisket, corned beef & pastrami served with a scoop of potato salad & macaroni salad",
+              "price": "$28.00"
+            },
+            {
+              "name": "Add a bowl of our Chicken Soup to your Nosh Salad",
+              "description": null,
+              "price": "$7.00"
+            }
+          ],
+          "footnotes": [
+            "Choice of Dressings: Russian, Ranch, Honey Mustard, Bleu Cheese, Raspberry Vinaigrette, Zesty Italian, Caesar, French, Oriental Sesame and Parmesan Peppercorn.",
+            "* May contain raw or under cooked ingredients. Consuming raw or under cooked food may increase your risk of foodborne illness."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sandwiches",
+      "title": "Sandwiches",
+      "sections": [
+        {
+          "title": "40 oz. Reuben Sandwich",
+          "subtitle": "( Let’s be honest, size does matter)",
+          "items": [
+            {
+              "name": "40 oz. Reuben Sandwich",
+              "description": "Finish this tiny little sandwich and hand-cut fries in 30 minutes and its free",
+              "price": "$69.00"
+            }
+          ]
+        },
+        {
+          "title": "GRILLED SANDWICH PLATTERS",
+          "note": "All grilled sandwich platters are prepared on your choice of bread - rye, sour dough, pumpernickel, marble rye or multi-grain\nServed with hand-cut fries, sweet potato fries, batter dipped onion rings, potato latke or baked beans\nMake your fries poutine style with gravy and cheese for $4.00",
+          "items": [
+            {
+              "name": "Reuben 4 ways",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "- Corned beef, sauerkraut, Swiss cheese, and Russian dressing... the way God intended it",
+                  "price": "$23.00"
+                },
+                {
+                  "label": "- Pastrami, sauerkraut, Swiss cheese, and Russian dressing... not quite as traditional",
+                  "price": "$23.00"
+                },
+                {
+                  "label": "- Combo.. Corned beef and Pastrami, sauerkraut, Swiss cheese, and Russian dressing... for those who want it all",
+                  "price": "$23.00"
+                },
+                {
+                  "label": "- Turkey Pastrami.. sauerkraut, Swiss cheese, and Russian dressing... The healthier alternative...keep telling yourself that...",
+                  "price": "$23.00"
+                }
+              ]
+            },
+            {
+              "name": "Moishe...Reuben’s Brother",
+              "description": "Spicy salsalito turkey, cole slaw, Swiss cheese, and Russian dressing",
+              "price": "$23.00"
+            },
+            {
+              "name": "Mendel..Reuben’s other Brother",
+              "description": "Albacore tuna salad, cheddar cheese & tomato",
+              "price": "$22.00"
+            },
+            {
+              "name": "“The Esther”...The Mother of all Grilled Sandwiches",
+              "description": "Pastrami, muenster cheese, sweet peppers & spicy Chutzpah mustard...",
+              "price": "$23.00"
+            },
+            {
+              "name": "Patty Melt... Reuben’s Sister in Law, Mendel’s Wife",
+              "description": "10oz. Angus steak burger cooked to order, Chutzpah onions and American cheese",
+              "price": "$20.00"
+            },
+            {
+              "name": "Traif... Reuben’s half Brother",
+              "description": "Your choice of boiled or baked ham with American cheese",
+              "price": "$20.00"
+            },
+            {
+              "name": "Smokey the Sandwich",
+              "description": "Smoked turkey, cheddar cheese, crispy bacon, sliced apple, and honey mustard",
+              "price": "$23.00"
+            },
+            {
+              "name": "Grilled Cheese",
+              "description": "Simply grilled cheese, sometimes you just don’t want to be clever",
+              "price": "$16.00"
+            },
+            {
+              "name": "Chazzer",
+              "description": "Meat Loaf wrapped in bacon with pepper jack cheese and our honey bourbon BBQ Sauce",
+              "price": "$20.00"
+            },
+            {
+              "name": "DaBronks",
+              "description": "Brisket, cheddar cheese, bacon, horseradish sauce topped with two fried eggs",
+              "price": "$23.00"
+            }
+          ]
+        },
+        {
+          "title": null,
+          "items": [
+            {
+              "name": "The Miser",
+              "description": "A grilled knockwurst on a bun with Chutzpah onions & a potato or kasha knish",
+              "price": "$15.00"
+            },
+            {
+              "name": "Peppers, Eggs & Chutzpah Onions,",
+              "description": "Scrambled with melted cheese on a hero roll",
+              "price": "$14.00",
+              "marks": [
+                "*"
+              ]
+            },
+            {
+              "name": "Joy Razza inspired, Chutzpah interpreted Potato & Eggs",
+              "description": "Scrambled with a potato latke and melted cheese on a hero roll",
+              "price": "$15.00"
+            },
+            {
+              "name": "Adult Pizza Bread",
+              "description": "Hero split with marinara sauce and melted mozzarella",
+              "price": "$15.00"
+            }
+          ]
+        },
+        {
+          "title": "BBQ CORNER",
+          "subtitle": "JUST BECAUSE WE’RE FROM NYC DOESN’T MEAN WE DON’T KNOW “Q”",
+          "note": "SANDWICHES SERVED ON CHALLAH ROLL, PILED HIGH WITH COLE SLAW & OUR SPECIAL “Q” SAUCE, WITH A SIDE OF ONION RINGS\nYOU CHOOSE - BRISKET * CHICKEN BREAST * PULLED CHICKEN $18.00",
+          "items": [
+            {
+              "name": "BRISKET",
+              "description": null,
+              "price": "$18.00"
+            },
+            {
+              "name": "CHICKEN BREAST",
+              "description": null,
+              "price": "$18.00"
+            },
+            {
+              "name": "PULLED CHICKEN",
+              "description": null,
+              "price": "$18.00"
+            }
+          ]
+        },
+        {
+          "title": "THE FRY BASKET",
+          "subtitle": "(Not really served in a basket)",
+          "items": [
+            {
+              "name": "Crispy Chicken Tenders (4) served with hand-cut fries",
+              "description": null,
+              "price": "$19.00"
+            },
+            {
+              "name": "Golden Fried Shrimp (6) served with hand-cut fries",
+              "description": null,
+              "price": "$20.00"
+            },
+            {
+              "name": "Two deep fried hotdogs wrapped in bacon with hand-cut fries and spicy creamy mustard",
+              "description": null,
+              "price": "$21.00"
+            }
+          ],
+          "footnotes": [
+            "* May contain raw or under cooked ingredients. Consuming raw or under cooked food may increase your risk of foodborne illness."
+          ]
+        },
+        {
+          "title": "SPECIALTY SANDWICHES",
+          "subtitle": "- SERVED WITH YOUR CHOICE OF POTATO OR MACARONI SALAD",
+          "note": "(UPGRADE TO HAND-CUT FRIES, SWEET POTATO FRIES, ONION RINGS, A POTATO LATKE OR BAKED BEANS - $3.50)",
+          "items": [
+            {
+              "name": "Chutzpah Cheesesteak (Not available during breakfast)",
+              "description": "Tender slices of beef grilled with sweet and hot peppers, Chutzpah onions, mushrooms & melted American cheese on a hero roll",
+              "price": "$19.00"
+            },
+            {
+              "name": "Bucko 46 (Not available during breakfast)",
+              "description": "Hot roast beef sliced thin, piled high with Chutzpah onions and melted mozzarella cheese, served on grilled garlic bread",
+              "price": "$21.00"
+            },
+            {
+              "name": "Bubba’s Famous",
+              "description": "Hot thick slices of our famous meatloaf with gravy, Chutzpah onions and mushrooms on a hero roll.",
+              "price": "$19.00"
+            },
+            {
+              "name": "The Luca Brasi",
+              "description": "A generous portion of crispy fried North Atlantic Cod, served on a hero roll with lettuce, tomato and our home made tartar sauce",
+              "price": "$20.00"
+            },
+            {
+              "name": "#15",
+              "description": "Choice of marinated, grilled chicken breast or home made breaded fried chicken breast with lettuce and tomato on a Challah roll with mayo, honey mustard or BBQ sauce (Not available during breakfast)",
+              "price": "$16.00"
+            },
+            {
+              "name": "Uptown",
+              "description": "Grilled Salmon w/ crispy bacon, baby spinach, tomato and home made wasabi ginger mayo on a challah roll",
+              "price": "$19.00"
+            },
+            {
+              "name": "The Sailor",
+              "description": "Hot pastrami and knockwurst with Chutzpah onions, melted Swiss cheese on grilled bread.",
+              "price": "$24.00"
+            },
+            {
+              "name": "The #2",
+              "description": "Hot corned beef, pastrami, swiss cheese with a potato latke in the middle, topped with creamy spicy mustard\n“Nothin sez New York like the Yankee Captain”",
+              "price": "$22.00"
+            },
+            {
+              "name": "Koufax",
+              "description": "Hot tender slices of beef brisket with Chutzpah onions topped with our horseradish cream sauce on a hero roll",
+              "price": "$20.00"
+            },
+            {
+              "name": "The Provenzano",
+              "description": "Golden chicken tenders with marinara and melted mozzarella on a hero roll.\nIt’s the least we can do, after all, he named his kid after Eric.",
+              "price": "$19.00"
+            },
+            {
+              "name": "The Adin (Not available during breakfast)",
+              "description": "Marinated grilled, sliced chicken breast sautéed with sweet and hot peppers, Chutzpah onions and melted mozzarella cheese on a hero roll. It’s a family thing",
+              "price": "$19.00"
+            },
+            {
+              "name": "The Mulberry Street Fish Sandwich",
+              "description": "Golden fried shrimp with marinara, a hint of spice and melted mozzarella on a hero roll",
+              "price": "$21.00"
+            },
+            {
+              "name": "The Club",
+              "description": "A triple decker of Turkey or Roast Beef or Tuna or grilled chicken breast or home made fried chicken with crisp bacon, lettuce, tomato & mayo on toast (grilled chicken breast not available during breakfast)",
+              "price": "$22.00",
+              "marks": [
+                "*"
+              ]
+            },
+            {
+              "name": "The “Fuggedaboudit” A Chutzpah original",
+              "description": "Hot corned beef and pastrami with a schmear of chopped liver on grilled bread with melted Swiss, cole slaw and Russian dressing",
+              "price": "$23.00"
+            },
+            {
+              "name": "The Red & Blue",
+              "description": "Hot Turkey Pastrami on a crispy roll with extra melted cheddar cheese, honey bourbon barbeque sauce topped with cole slaw",
+              "price": "$22.00"
+            },
+            {
+              "name": "Veggie Delight",
+              "description": "Lettuce, tomato, Chutzpah onions, sautéed mushrooms, roasted bell peppers, your choice of cheese on a hero roll",
+              "price": "$17.00"
+            },
+            {
+              "name": "R.R.G.S.",
+              "description": "Hot turkey with horseradish cream sauce, and cranberry compote on a hero roll (because it really is)",
+              "price": "$21.00"
+            },
+            {
+              "name": "Asian Shrimp Po Boy",
+              "description": "Teriyaki glazed fried shrimp on our shredded cabbage mix served on a crispy roll topped with Wasabi Ginger Mayo",
+              "price": "$21.00"
+            },
+            {
+              "name": "The Mother and Child Reunion",
+              "description": "House made tangy pulled BBQ chicken, on a crispy roll, with Chutzpah onions and topped with two fried eggs",
+              "price": "$21.00"
+            },
+            {
+              "name": "Organ Donor",
+              "description": "Hot tongue and muenster cheese melt with chopped liver, raw onions and Chutzpah mustard",
+              "price": "$23.00"
+            },
+            {
+              "name": "The Goombah (Not available during breakfast)",
+              "description": "Tender slices of breaded veal cutlet topped with marinara sauce and melted mozzarella on a crispy hero roll",
+              "price": "$21.00"
+            },
+            {
+              "name": "The Freudian Dip (Not available during breakfast)",
+              "description": "Crispy chicken schnitzel topped with cranberry compote on a hero roll, served with a side of white gravy",
+              "price": "$25.00"
+            },
+            {
+              "name": "The Boat",
+              "description": "Thick cut grilled Kosher Bologna, melted pepper jack cheese, raw onion sandwiched around potato salad topped with creamy spicy mustard",
+              "price": "$22.00"
+            },
+            {
+              "name": "The Arthur Ave.",
+              "description": "Sicilian style eggplant parmesan with spicy red sauce on a hero roll",
+              "price": "$18.00"
+            }
+          ],
+          "footnotes": [
+            "* May contain raw or under cooked ingredients. Consuming raw or under cooked food may increase your risk of foodborne illness."
+          ]
+        },
+        {
+          "title": "THE SKY SCRAPER",
+          "items": [
+            {
+              "name": "THE SKY SCRAPER",
+              "description": "It’s the sandwich that made the New York skyline so famous! You design it. We build it.\n3 pieces of bread, 2 choices of meat, 1 choice of cheese, topped with cole slaw and Russian dressing.\nIf you finish the Sky Scraper and you’re still hungry ... Dessert’s on us. In house only... NICE TRY!",
+              "price": "$44.00"
+            }
+          ]
+        },
+        {
+          "title": "OVER STUFFED SANDWICHES",
+          "subtitle": "Ours are the largest in town",
+          "note": "*Served on Rye, Sourdough, Pumpernickel, Multigrain or Marble Rye\nHero or Challah Roll or Bagel for $0.75, Croissant for $1.75\nKINDLY ORDER SANDWICHES BY NUMBER",
+          "items": [
+            {
+              "name": "Slow Smoked Lean Pastrami (Please don’t embarrass yourself and ask for Mayonnaise)",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$16"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$19"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$23"
+                }
+              ]
+            },
+            {
+              "name": "House Cured Corned Beef (Mayonnaise? See above)",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$16"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$19"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$23"
+                },
+                {
+                  "label": "First Cut Corned Beef add $1.50",
+                  "price": "$1.50"
+                }
+              ]
+            },
+            {
+              "name": "Chutzpah Special Corned Beef with cole slaw and Russian dressing",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$16"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$19"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$23"
+                }
+              ]
+            },
+            {
+              "name": "Hot Beef Brisket (Not the mayo thing again)",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$16"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$19"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$23"
+                }
+              ]
+            },
+            {
+              "name": "Hot Turkey Pastrami",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$15"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$18"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$22"
+                }
+              ]
+            },
+            {
+              "name": "Tongue (hot or cold)",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$19"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$22"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$26"
+                }
+              ]
+            },
+            {
+              "name": "Liverwurst",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$15"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$18"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$22"
+                }
+              ]
+            },
+            {
+              "name": "Mesquite Smoked Turkey",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$15"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$18"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$22"
+                }
+              ]
+            },
+            {
+              "name": "Fresh Roasted Breast of Turkey",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$15"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$18"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$22"
+                }
+              ]
+            },
+            {
+              "name": "Spicy Turkey",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$15"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$18"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$22"
+                }
+              ]
+            },
+            {
+              "name": "Roast Beef (Top round, roasted in house)",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$16"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$19"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$23"
+                }
+              ],
+              "marks": [
+                "*"
+              ]
+            },
+            {
+              "name": "Kosher Salami",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$16"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$19"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$23"
+                }
+              ]
+            },
+            {
+              "name": "Kosher Bologna",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$16"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$19"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$23"
+                }
+              ]
+            },
+            {
+              "name": "Beef Bologna",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$14"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$17"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$21"
+                }
+              ]
+            },
+            {
+              "name": "Chutzpah B.L.T. (bacon, lettuce & fried tomato)",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$14"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$17"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$21"
+                }
+              ]
+            },
+            {
+              "name": "Baked Ham",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$15"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$18"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$22"
+                }
+              ]
+            },
+            {
+              "name": "Imported Boiled Ham",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$15"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$18"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$22"
+                }
+              ]
+            },
+            {
+              "name": "Chopped Liver",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$15"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$18"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$22"
+                }
+              ]
+            },
+            {
+              "name": "Albacore Tuna Salad",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$15"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$18"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$22"
+                }
+              ]
+            },
+            {
+              "name": "Gourmet Chicken Salad (Chicken breast with fresh dill, grapes, and pecans)",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$15"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$18"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$22"
+                }
+              ]
+            },
+            {
+              "name": "Egg Salad",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$14"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$17"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$21"
+                }
+              ]
+            },
+            {
+              "name": "Jumbo Shrimp Salad served on a hero roll",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Nosh",
+                  "price": "$17"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$20"
+                },
+                {
+                  "label": "K’nocker",
+                  "price": "$24"
+                }
+              ]
+            }
+          ],
+          "footnotes": [
+            "*May contain raw or under cooked ingredients. Consuming raw or under cooked food may increase your risk of food borne illness.",
+            "The “Nosh” is a half of our regular sandwich. We make it a meal in itself with a side of potato or macaroni salad.",
+            "Upgrade to hand-cut fries, sweet potato fries, onion rings, baked beans or a potato latke for $3.50",
+            "The “K’nocker” is one and 1/2 times the size of our regular sandwich (12oz.)",
+            "THERE IS NO “EVERYTHING” PLEASE BE SPECIFIC WHEN ORDERING!",
+            "Sandwich Compliments: Lettuce, Tomato, Onions, Chutzpah Onions Mustard, Mayo, Homemade Spicy Mustard, Horseradish Cream Sauce, Russian, BBQ Sauce, Honey Mustard, House Made Wasabi Ginger Mayo, Creamy Spicy Mustard, Spicy Chipotle Mayo",
+            "We’ll add cheese to any sandwich for $1.50 (American, Cheddar, Muenster, Swiss, Mozzarella, Pepper Jack)",
+            "Add roasted red peppers for $2.50, Bacon for $4.00, Hot or Sweet Peppers for $1.50, Schmear of home made chopped liver $4.00",
+            "Add a handful of fries or sweet potato fries INSIDE any deli sandwich for $2.00"
+          ]
+        },
+        {
+          "title": "Soup or Salad and a 1/2",
+          "items": [
+            {
+              "name": "Add a bowl of chicken soup or small salad to any “Nosh” size sandwich for an additional",
+              "description": null,
+              "price": "$7.00"
+            },
+            {
+              "name": "Matzo Ball",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Kreplach",
+              "description": null,
+              "price": "$9.00"
+            }
+          ]
+        },
+        {
+          "title": "COMBO SANDWICHES",
+          "items": [
+            {
+              "name": "Mix & match any two meats or any two salads on our regular size sandwich",
+              "description": null,
+              "price": "$19.00"
+            },
+            {
+              "name": "or choose up to three meats on our “K’nocker” size sandwich",
+              "description": null,
+              "price": "$23.00"
+            },
+            {
+              "name": "House Cured Tongue (extra)",
+              "description": null,
+              "price": "$5.00"
+            }
+          ],
+          "footnotes": [
+            "Combo not available on our “Nosh” sandwiches."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "burgers",
+      "title": "Burgers & Hot Sandwiches",
+      "sections": [
+        {
+          "title": "HOT OPEN FACED SANDWICHES",
+          "note": "Topped with gravy served with cranberry campote and choice of horseraddish mashed potatoes, hand-cut fries or sweet potato fries",
+          "items": [
+            {
+              "name": "Roast Beef, Turkey Breast, Brisket or Meat Loaf",
+              "description": null,
+              "price": "$27.00"
+            }
+          ]
+        },
+        {
+          "title": "SPECIALTY BURGERS",
+          "subtitle": "All specialty burgers served with onion rings",
+          "note": "(Not available during breakfast)",
+          "items": [
+            {
+              "name": "The Voodoo Burger",
+              "description": "Two burgers, piled high on a challah roll with pepper jack cheese, Cajun seasoning, tabasco grilled onions, grilled jalapeños and spicy remoulade sauce. We dare you!",
+              "price": "$20.00"
+            },
+            {
+              "name": "The Durango Burger",
+              "description": "Two burgers, piled high on a challah roll with cheddar cheese, crispy bacon and our tangy BBQ sauce",
+              "price": "$22.00"
+            },
+            {
+              "name": "The Farmers Burger",
+              "description": "Two burgers, piled high on a challah roll with Swiss cheese, grilled ham, sautéed mushrooms topped with a fried egg",
+              "price": "$24.00"
+            },
+            {
+              "name": "Black and Bleu Burger",
+              "description": "Two burgers, piled high on a challah roll, blackened, served with bleu cheese and Chutzpah Onions",
+              "price": "$20.00"
+            },
+            {
+              "name": "Pizza Burger",
+              "description": "Two burgers, piled high on a challah roll with mozzarella cheese and marinara sauce",
+              "price": "$20.00"
+            },
+            {
+              "name": "Chutzpah Deli Burger",
+              "description": "Two burgers, piled high on a challah roll with hot Pastrami, melted Swiss, caramelized onions, and spicy Chutzpah mustard",
+              "price": "$26.00"
+            },
+            {
+              "name": "The Ultimate",
+              "description": "Veggie burger over shredded cabbage mix topped with roasted red peppers, sautéed spinach, mushrooms and Wasabi Ginger Mayo",
+              "price": "$20.00"
+            }
+          ],
+          "footnotes": [
+            "* (red asterisk at top-left corner of section box, refers to raw/undercooked disclaimer)"
+          ]
+        },
+        {
+          "title": "ANGUS STEAK BURGERS",
+          "subtitle": "(Not available during breakfast)",
+          "note": "Fresh lean hand formed burgers, piled high, cooked to order.  Served with lettuce, tomato, onions and Chutzpah burger sauce on a challah roll with hand-cut fries",
+          "advisory": true,
+          "items": [
+            {
+              "name": "Burger 10oz (2 burgers)",
+              "description": null,
+              "price": "$18.50"
+            },
+            {
+              "name": "Burger 15oz (3 burgers)",
+              "description": null,
+              "price": "$22.50"
+            },
+            {
+              "name": "Burger 20oz (Two 10oz burgers)",
+              "description": null,
+              "price": "$26.50"
+            },
+            {
+              "name": "King Kong Burger",
+              "description": "four 5oz burgers, two types of cheese, bacon and Chutzpah onions",
+              "price": "$33.00"
+            },
+            {
+              "name": "Veggie Burger",
+              "description": null,
+              "price": "$18.00"
+            }
+          ]
+        },
+        {
+          "title": "Extras",
+          "items": [
+            {
+              "name": "Cheese (American, Cheddar, Swiss, Muenster, Mozzarella, Bleu, and Pepper Jack)",
+              "description": null,
+              "price": "$1.50"
+            },
+            {
+              "name": "Bacon",
+              "description": null,
+              "price": "$4.00"
+            },
+            {
+              "name": "Mushrooms",
+              "description": null,
+              "price": "$1.75"
+            },
+            {
+              "name": "Hot and/or Sweet Peppers",
+              "description": null,
+              "price": "$1.50"
+            },
+            {
+              "name": "Chutzpah Onions",
+              "description": null,
+              "price": "N/C"
+            }
+          ]
+        },
+        {
+          "title": "Delancey Street Specials",
+          "items": [
+            {
+              "name": "Corned Beef & Cabbage Served with a Boiled Potato",
+              "description": null,
+              "price": "$28.00"
+            },
+            {
+              "name": "Two “Jumbo Specials” - Grilled Knockwurst with Beans or hand-cut fries",
+              "description": null,
+              "price": "$22.00"
+            },
+            {
+              "name": "Beef Stroganoff over Egg Noodles",
+              "description": null,
+              "price": "$24.00"
+            },
+            {
+              "name": "Veal and Peppers over Egg Noodles",
+              "description": null,
+              "price": "$24.00"
+            },
+            {
+              "name": "Chicken in the Pot",
+              "description": "A traditional Lower East Side favorite served with half a chicken, consomme, noodles, fresh vegetables, matzo ball, and kreplach",
+              "price": "$33.00"
+            },
+            {
+              "name": "Open Faced Latkes",
+              "description": "with a choice of pastrami or corned beef and melted Swiss, pulled bbq chicken with melted cheddar, or brisket and gravy",
+              "price": "$28.00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "entrees",
+      "title": "Entrees & Sides",
+      "sections": [
+        {
+          "title": "ENTREES",
+          "note": "“A la Carte” is served with one side. “Entrees” are served with House or Caesar salad, and your choice of two sides:",
+          "items": [
+            {
+              "name": "Garlic Roasted Chicken",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$23.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$28.00"
+                }
+              ]
+            },
+            {
+              "name": "Stuffed Cabbage",
+              "description": "an old world recipe of hand rolled cabbage mixed with mildly spiced beef and raisins, served with home made sweet & sour sauce",
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$27.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$32.00"
+                }
+              ]
+            },
+            {
+              "name": "Chicken Schnitzel with gravy",
+              "description": "(not available during breakfast)",
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$27.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$32.00"
+                }
+              ]
+            },
+            {
+              "name": "Wiener Schnitzel with lemon wedges",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$28.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$33.00"
+                }
+              ]
+            },
+            {
+              "name": "Bubba’s Famous Meatloaf wrapped in bacon with brown gravy",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$25.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$30.00"
+                }
+              ]
+            },
+            {
+              "name": "North Atlantic Cod Filet",
+              "description": "fried golden with tarter sauce",
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$25.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$30.00"
+                }
+              ]
+            },
+            {
+              "name": "Sauteed Calves Liver with Chutzpah onions and bacon",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$26.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$31.00"
+                }
+              ],
+              "marks": [
+                "*"
+              ]
+            },
+            {
+              "name": "Tongue Polonaise",
+              "description": "warm slices of tongue piled high with a sweet & sour sauce",
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$27.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$32.00"
+                }
+              ]
+            },
+            {
+              "name": "Brisket of Beef with mushroom gravy",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$25.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$30.00"
+                }
+              ]
+            },
+            {
+              "name": "Half Honey Bourbon BBQ Chicken",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$23.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$28.00"
+                }
+              ]
+            },
+            {
+              "name": "Chopped Steak with mushroom and onion gravy",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$23.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$28.00"
+                }
+              ],
+              "marks": [
+                "*"
+              ]
+            },
+            {
+              "name": "London Broil with gravy and mushrooms",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$27.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$32.00"
+                }
+              ],
+              "marks": [
+                "*"
+              ]
+            },
+            {
+              "name": "Teriyaki Glazed Shrimp",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$27.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$32.00"
+                }
+              ]
+            },
+            {
+              "name": "Eggplant Parmesan",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$23.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$28.00"
+                }
+              ]
+            },
+            {
+              "name": "Chicken Parmesan",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$27.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$32.00"
+                }
+              ]
+            },
+            {
+              "name": "Veal Parmesan",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$28.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$33.00"
+                }
+              ]
+            },
+            {
+              "name": "Shrimp Parmesan",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$28.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$33.00"
+                }
+              ]
+            },
+            {
+              "name": "Golden Fried Shrimp",
+              "description": "with lemon wedges and cocktail sauce",
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$27.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$32.00"
+                }
+              ]
+            },
+            {
+              "name": "Seasame Ginger Salmon",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "A La Carte",
+                  "price": "$27.00"
+                },
+                {
+                  "label": "Entrees",
+                  "price": "$32.00"
+                }
+              ]
+            }
+          ],
+          "footnotes": [
+            "Price columns headed: A La Carte | Entrees"
+          ]
+        },
+        {
+          "title": "SIDES",
+          "items": [
+            {
+              "name": "Hand-cut Double Fried Potatoes",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Regular",
+                  "price": "$7.00"
+                },
+                {
+                  "label": "Large",
+                  "price": "$13.00"
+                }
+              ]
+            },
+            {
+              "name": "Sweet Potato Fries",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Regular",
+                  "price": "$7.00"
+                },
+                {
+                  "label": "Large",
+                  "price": "$13.00"
+                }
+              ]
+            },
+            {
+              "name": "Onion Rings",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Regular",
+                  "price": "$7.00"
+                },
+                {
+                  "label": "Large",
+                  "price": "$13.00"
+                }
+              ]
+            },
+            {
+              "name": "Knish (potato or kasha)",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Split Knish with melted swiss",
+              "description": null,
+              "price": "$9.50"
+            },
+            {
+              "name": "Cranberry Compote",
+              "description": null,
+              "price": "$7.00"
+            },
+            {
+              "name": "Baked Beans",
+              "description": null,
+              "price": "$7.00"
+            },
+            {
+              "name": "Boiled Potato w/butter",
+              "description": null,
+              "price": "$7.00"
+            },
+            {
+              "name": "Kasha Varnishka",
+              "description": null,
+              "price": "$7.00"
+            },
+            {
+              "name": "Roasted Red Peppers",
+              "description": null,
+              "price": "$7.00"
+            },
+            {
+              "name": "Potato Salad",
+              "description": null,
+              "price": "$4.00"
+            },
+            {
+              "name": "Macaroni Salad",
+              "description": null,
+              "price": "$4.00"
+            },
+            {
+              "name": "Boiled Cabbage",
+              "description": null,
+              "price": "$7.00"
+            },
+            {
+              "name": "Sautéed Spinach and Garlic",
+              "description": "(Not available during breakfast)",
+              "price": "$7.00"
+            },
+            {
+              "name": "Kugel",
+              "description": "(see definition under appetizers)",
+              "price": "$8.00"
+            },
+            {
+              "name": "Vegetable of the Day",
+              "description": null,
+              "price": "$7.00"
+            },
+            {
+              "name": "House Made Apple Sauce",
+              "description": null,
+              "price": "$7.00"
+            },
+            {
+              "name": "Horseradish Mashed Potatoes and Gravy",
+              "description": null,
+              "price": "$7.00"
+            },
+            {
+              "name": "Potato Latkes",
+              "description": null,
+              "price": "$9.00"
+            },
+            {
+              "name": "Cottage Cheese",
+              "description": null,
+              "price": "$6.00"
+            },
+            {
+              "name": "Egg Noodles and Gravy",
+              "description": null,
+              "price": "$7.00"
+            },
+            {
+              "name": "Pasta with Butter or Marinara",
+              "description": null,
+              "price": "$7.00"
+            },
+            {
+              "name": "Rice",
+              "description": null,
+              "price": "$7.00"
+            },
+            {
+              "name": "Pickles and Cole Slaw",
+              "description": null,
+              "price": "$5.00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drinks",
+      "title": "Drinks & Kids",
+      "sections": [
+        {
+          "title": "BEVERAGES",
+          "items": [
+            {
+              "name": "Fountain Sodas with free refills (Dine In Only)",
+              "description": "Coke, Diet Coke, Sprite, Fresh Brewed Iced Tea, Lemonade",
+              "price": "$3.50"
+            },
+            {
+              "name": "Iced Coffee",
+              "description": null,
+              "price": "$3.50"
+            },
+            {
+              "name": "Two cents plain",
+              "description": "If you know what it is, it’s free . . . Otherwise",
+              "price": "$3.00"
+            },
+            {
+              "name": "Dr. Brown’s Soda",
+              "description": "Cream, Diet Cream, Black Cherry, Diet Black Cherry, Cel-ray, Root Beer, Ginger Ale",
+              "price": "$4.00"
+            },
+            {
+              "name": "Pure Orange, Apple, Cranberry Juice",
+              "description": null,
+              "price": "$4.00"
+            },
+            {
+              "name": "Snapple",
+              "description": null,
+              "price": "$3.50"
+            },
+            {
+              "name": "Bottled Water",
+              "description": null,
+              "price": "$2.00"
+            },
+            {
+              "name": "Egg Cream chocolate or vanilla syrup made with Fox’s Ubet of course",
+              "description": null,
+              "price": "$5.00"
+            }
+          ]
+        },
+        {
+          "title": "Coffee",
+          "items": [
+            {
+              "name": "House Blend Reg or Decaf w/ free refills (Dine In Only)",
+              "description": null,
+              "price": "$3.50"
+            },
+            {
+              "name": "A Nice Cup of Tea with a Nice Piece of Lemon",
+              "description": null,
+              "price": "$3.50"
+            },
+            {
+              "name": "Hot Chocolate",
+              "description": "with real whipped cream",
+              "price": "$4.50"
+            },
+            {
+              "name": "Milk",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Kids",
+                  "price": "$3.50"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$4.50"
+                }
+              ]
+            },
+            {
+              "name": "Chocolate Milk",
+              "description": null,
+              "price": null,
+              "options": [
+                {
+                  "label": "Kids",
+                  "price": "$4.50"
+                },
+                {
+                  "label": "Regular",
+                  "price": "$5.50"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Little New Yorkers Menu",
+          "subtitle": "10 and under, please.",
+          "note": "Includes choice of hand-cut fries, house made apple sauce, horseradish mashed potatoes or veggies and a child size fountain drink",
+          "items": [
+            {
+              "name": "Cheeseburger",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Kosher Hot Dog",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Chicken Tenders",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "French Bread Pizza",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Grilled Cheese",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Pasta with Butter or Marinara",
+              "description": null,
+              "price": "$8.00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "title": "Desserts",
+      "intro": "May we tempt you, some more?",
+      "sections": [
+        {
+          "title": "DESSERTS",
+          "items": [
+            {
+              "name": "Apple Strudel",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Carrot Cake",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Cake of the Week",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Ruglach (3 pieces)",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Seven Layer Cake",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Chocolate Babka",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Black & White Cookie",
+              "description": null,
+              "price": "$7.00"
+            },
+            {
+              "name": "Hamantaschen",
+              "description": "It ain’t just for Purim anymore",
+              "price": "$7.00"
+            },
+            {
+              "name": "Linzer Tart",
+              "description": null,
+              "price": "$7.00"
+            },
+            {
+              "name": "Rice Pudding",
+              "description": null,
+              "price": "$6.00"
+            },
+            {
+              "name": "Lemon Bars",
+              "description": null,
+              "price": "$6.00"
+            },
+            {
+              "name": "Napoleon",
+              "description": null,
+              "price": "$8.00"
+            },
+            {
+              "name": "Cheese Cake",
+              "description": null,
+              "price": "$9.00",
+              "options": [
+                {
+                  "label": "Add home made fruit sauce",
+                  "price": "$1.00"
+                }
+              ]
+            },
+            {
+              "name": "Devil’s Food Double Chocolate Cheese Cake",
+              "description": "cheese cake surrounded by devil’s food cake and chocolate ganache",
+              "price": "$12.00"
+            }
+          ]
+        },
+        {
+          "title": "The Sweet Shoppe",
+          "items": [
+            {
+              "name": "Chocolate Grahams",
+              "description": null,
+              "price": "$24.00 per pound"
+            },
+            {
+              "name": "Fruit Slices",
+              "description": null,
+              "price": "$19.00 per pound"
+            },
+            {
+              "name": "Chocolate Covered Marshmallows",
+              "description": null,
+              "price": "$21.00 per pound"
+            },
+            {
+              "name": "Chocolate Covered Jelly Squares",
+              "description": null,
+              "price": "$21.00 per pound"
+            },
+            {
+              "name": "Marzipan (rainbow cookies)",
+              "description": null,
+              "price": "$27.00 per pound"
+            },
+            {
+              "name": "Halvah",
+              "description": null,
+              "price": "$22.00 per pound"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+---
+import { Image } from 'astro:assets';
+import site from '../data/site.json';
+import liberty from '../assets/photos/liberty.png';
+import OpenStatus from './OpenStatus.astro';
+import { hours } from '../lib/hours';
+
+const nav = [
+  { href: '/our-menu/', label: 'Our Menu' },
+  { href: '/btp/', label: 'By The Pound' },
+  { href: '/catering/', label: 'Catering' },
+  { href: '/holidaymenu/', label: 'Holiday Menu' },
+  { href: '/our-gallery/', label: 'Food Porn' },
+  { href: '/about-us/', label: 'About Us' },
+  { href: '/contact/', label: 'Contact & Directions' },
+];
+const path = Astro.url.pathname;
+const weekday = hours[0];
+---
+
+<div class="strip">
+  <div class="wrap strip-inner">
+    <OpenStatus>Mon - Fri {weekday.text}</OpenStatus>
+    <a href={site.mapsUrl} class="addr">{site.address.street}, {site.address.city}</a>
+    <a href={site.phoneHref} class="tel">{site.phone}</a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a href="/" class="brand" aria-label="Chutzpah Deli, home">
+      <Image src={liberty} alt="" width={44} height={59} class="mascot" loading="eager" />
+      <span class="brand-text">
+        <span class="brand-name">Chutzpah</span>
+        <span class="brand-sub">a REAL New York deli</span>
+      </span>
+    </a>
+
+    <button class="menu-btn" aria-expanded="false" aria-controls="site-nav">
+      <span class="menu-icon" aria-hidden="true"></span>
+      Menu
+    </button>
+
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <ul>
+        {
+          nav.map((n) => (
+            <li>
+              <a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined}>
+                {n.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a class="btn btn-red order" href={site.orderUrl}>Order Online</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('.menu-btn');
+  const nav = document.getElementById('site-nav');
+  btn?.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    nav?.classList.toggle('is-open', !open);
+  });
+</script>
+
+<style>
+  .strip {
+    background: var(--rye-2);
+    color: #d9d4ca;
+    font-size: 14px;
+  }
+  .strip-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 28px;
+    min-height: 40px;
+    padding-block: 8px;
+  }
+  .strip a {
+    color: #d9d4ca;
+    text-decoration: none;
+  }
+  .strip a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  .strip .tel {
+    margin-left: auto;
+    font-weight: 700;
+    color: var(--mustard);
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--rye);
+    color: var(--tile);
+    border-bottom: 3px solid var(--pastrami);
+  }
+  .bar {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    min-height: 76px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--tile);
+    text-decoration: none;
+    flex: none;
+  }
+  .mascot {
+    width: 38px;
+    height: auto;
+    margin-block: 6px;
+  }
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+  .brand-name {
+    font-family: var(--display);
+    font-size: 27px;
+    letter-spacing: 0.01em;
+    color: #fff;
+  }
+  .brand-sub {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--mustard);
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-left: auto;
+  }
+  .nav ul {
+    display: flex;
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .nav ul a {
+    display: block;
+    padding: 10px 10px;
+    color: #e8e4db;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+  }
+  .nav ul a:hover {
+    color: #fff;
+    border-bottom-color: var(--mustard);
+  }
+  .nav ul a[aria-current='page'] {
+    color: #fff;
+    border-bottom-color: var(--pastrami);
+  }
+  .order {
+    min-height: 44px;
+    white-space: nowrap;
+  }
+
+  .menu-btn {
+    display: none;
+    margin-left: auto;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    padding: 0 14px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: var(--radius);
+    font: 700 15px var(--body);
+    cursor: pointer;
+  }
+  .menu-icon,
+  .menu-icon::before,
+  .menu-icon::after {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: currentColor;
+    position: relative;
+  }
+  .menu-icon::before,
+  .menu-icon::after {
+    content: '';
+    position: absolute;
+  }
+  .menu-icon::before {
+    top: -6px;
+  }
+  .menu-icon::after {
+    top: 6px;
+  }
+
+  @media (max-width: 1120px) {
+    .nav ul a {
+      padding-inline: 7px;
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 1020px) {
+    .menu-btn {
+      display: inline-flex;
+    }
+    .nav {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 8px var(--gutter) 20px;
+      background: var(--rye);
+      border-bottom: 3px solid var(--pastrami);
+    }
+    .nav.is-open {
+      display: flex;
+    }
+    .nav ul {
+      flex-direction: column;
+    }
+    .nav ul a {
+      padding: 14px 0;
+      font-size: 18px;
+      border-bottom: 1px solid #3a3631;
+    }
+    .order {
+      margin-top: 16px;
+    }
+  }
+  @media (max-width: 560px) {
+    .strip .addr {
+      display: none;
+    }
+  }
+</style>

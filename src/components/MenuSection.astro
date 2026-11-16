@@ -1,0 +1,218 @@
+---
+/*
+  One section of a printed menu: heading, notes, then each item with a dotted
+  leader to its price. Data comes straight from the JSON files in src/data.
+*/
+type Option = { label: string; price: string | null };
+type Item = {
+  name: string | null;
+  description?: string | null;
+  price?: string | null;
+  options?: Option[];
+  marks?: string[];
+  tags?: string[];
+};
+type Section = {
+  title: string | null;
+  subtitle?: string;
+  note?: string;
+  advisory?: boolean;
+  items: Item[];
+  footnotes?: string[];
+};
+interface Props {
+  section: Section;
+  tone?: 'plain' | 'boxed';
+}
+const { section, tone = 'plain' } = Astro.props;
+const lines = (t?: string | null) => (t ? t.split('\n').filter(Boolean) : []);
+---
+
+<section class:list={['menu-section', tone, { untitled: !section.title }]}>
+  {
+    section.title && (
+      <header>
+        <h3 class="display">
+          {section.title}
+          {section.advisory && <span class="mark">*</span>}
+        </h3>
+        {section.subtitle && <p class="sub">{section.subtitle}</p>}
+        {section.note && (
+          <div class="note">
+            {lines(section.note).map((l) => (
+              <p>{l}</p>
+            ))}
+          </div>
+        )}
+      </header>
+    )
+  }
+  <ul class="items">
+    {
+      section.items.map((it) => (
+        <li class="item">
+          <div class="line">
+            <span class="name">
+              {it.name}
+              {it.marks?.map((m) => (
+                <span class="mark">{m}</span>
+              ))}
+              {it.tags?.map((t) => (
+                <span class="tag">{t}</span>
+              ))}
+            </span>
+            {it.price && (
+              <>
+                <span class="dots" aria-hidden="true" />
+                <span class="price">{it.price}</span>
+              </>
+            )}
+          </div>
+          {lines(it.description).map((d) => (
+            <p class="desc">{d}</p>
+          ))}
+          {it.options && it.options.length > 0 && (
+            <ul class="opts">
+              {it.options.map((o) => (
+                <li class="line opt">
+                  <span class="name">{o.label}</span>
+                  {o.price && (
+                    <>
+                      <span class="dots" aria-hidden="true" />
+                      <span class="price">{o.price}</span>
+                    </>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+  {
+    section.footnotes && section.footnotes.length > 0 && (
+      <div class="foot">
+        {section.footnotes.map((f) => (
+          <p>{f}</p>
+        ))}
+      </div>
+    )
+  }
+</section>
+
+<style>
+  .menu-section {
+    break-inside: avoid;
+  }
+  .menu-section.boxed {
+    background: #fff;
+    border: 1px solid var(--grout);
+    border-top: 4px solid var(--rye);
+    padding: 26px clamp(18px, 3vw, 30px) 18px;
+  }
+  header {
+    margin-bottom: 12px;
+  }
+  h3 {
+    font-size: clamp(22px, 2.4vw, 28px);
+    line-height: 1.05;
+  }
+  .sub {
+    margin-top: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--muted);
+  }
+  .note {
+    margin-top: 10px;
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  .note p + p {
+    margin-top: 4px;
+  }
+  .items,
+  .opts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .item {
+    padding: 11px 0;
+    border-bottom: 1px solid var(--grout);
+  }
+  .item:last-child {
+    border-bottom: 0;
+  }
+  .line {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .name {
+    font-weight: 700;
+    font-size: 16.5px;
+    line-height: 1.35;
+  }
+  .dots {
+    flex: 1 1 24px;
+    min-width: 24px;
+    border-bottom: 2px dotted #aaa59b;
+    transform: translateY(-4px);
+  }
+  .price {
+    flex: none;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--pastrami);
+    max-width: 55%;
+    white-space: normal;
+    text-align: right;
+  }
+  .desc {
+    margin-top: 3px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--muted);
+    max-width: 62ch;
+  }
+  .opts {
+    margin-top: 6px;
+    padding-left: 14px;
+    border-left: 2px solid var(--grout);
+  }
+  .opt {
+    padding: 3px 0;
+  }
+  .opt .name {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--rye-2);
+  }
+  .opt .price {
+    font-weight: 600;
+  }
+  .mark {
+    color: var(--pastrami);
+    margin-left: 2px;
+  }
+  .tag {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 1px 7px;
+    border: 1px solid var(--grout);
+    border-radius: 99px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    vertical-align: 2px;
+  }
+  .foot {
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--muted);
+    font-style: italic;
+  }
+</style>
