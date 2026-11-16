@@ -16,8 +16,7 @@ const year = new Date().getFullYear();
       <h2>Find us</h2>
       <p>
         {site.address.street}<br />
-        {site.address.city}, {site.address.state}
-        {site.address.zip}
+        {site.address.city}, {site.address.state} {site.address.zip}
       </p>
       <p><a href={site.phoneHref}>{site.phone}</a><br />Fax {site.fax}</p>
       <p><a href={site.mapsUrl}>Get directions</a></p>

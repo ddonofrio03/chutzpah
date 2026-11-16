@@ -28,8 +28,7 @@ const thanks = new URL('/thank-you/', Astro.site).toString();
       <div class="block">
         <h2>Address</h2>
         <p class="big">
-          {site.address.street}<br />{site.address.city}, {site.address.state}
-          {site.address.zip}
+          {site.address.street}<br />{site.address.city}, {site.address.state} {site.address.zip}
         </p>
         <a href={site.mapsUrl}>Get directions in Google Maps</a>
       </div>

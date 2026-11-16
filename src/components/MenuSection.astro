@@ -33,8 +33,7 @@ const lines = (t?: string | null) => (t ? t.split('\n').filter(Boolean) : []);
     section.title && (
       <header>
         <h3 class="display">
-          {section.title}
-          {section.advisory && <span class="mark">*</span>}
+          {section.title}{section.advisory && <> <span class="mark">*</span></>}
         </h3>
         {section.subtitle && <p class="sub">{section.subtitle}</p>}
         {section.note && (
@@ -55,10 +54,10 @@ const lines = (t?: string | null) => (t ? t.split('\n').filter(Boolean) : []);
             <span class="name">
               {it.name}
               {it.marks?.map((m) => (
-                <span class="mark">{m}</span>
+                <> <span class="mark">{m}</span></>
               ))}
               {it.tags?.map((t) => (
-                <span class="tag">{t}</span>
+                <> <span class="tag">{t}</span></>
               ))}
             </span>
             {it.price && (
