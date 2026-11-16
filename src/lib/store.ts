@@ -25,8 +25,8 @@ export function json(body: unknown, status = 200, cache = 'no-store'): Response 
 export async function readJson<T>(name: string): Promise<T | null> {
   const url = blobUrl(name);
   if (!url) throw new Error('storage not configured');
-  // Minute-sized cache buster so changes show within about a minute everywhere.
-  const res = await fetch(`${url}?v=${Math.floor(Date.now() / 60000)}`, { cache: 'no-store' });
+  // Ask Blob storage for the newest copy (its CDN otherwise keeps a saved file for up to a minute).
+  const res = await fetch(url, { cache: 'no-store', headers: { 'cache-control': 'no-cache' } });
   if (!res.ok) return null;
   return (await res.json()) as T;
 }
@@ -65,4 +65,4 @@ export const clean = (v: unknown, max: number): string =>
     .trim()
     .slice(0, max);
 
-export const CACHE_PUBLIC = 'public, max-age=0, s-maxage=30, stale-while-revalidate=60';
+export const CACHE_PUBLIC = 'public, max-age=0, s-maxage=10, stale-while-revalidate=10';
